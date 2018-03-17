@@ -123,6 +123,8 @@ endif
 " Add a bit extra margin to the left
 set foldcolumn=1
 
+" Set line numbers
+set number
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
