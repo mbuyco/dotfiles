@@ -7,13 +7,14 @@ call plug#begin()
   Plug 'vim-airline/vim-airline-themes'
   Plug 'vim-scripts/mru.vim'
 
-  " syntax, code completion
+  " syntax, code completion, others
   Plug 'scrooloose/nerdcommenter'
   Plug 'pangloss/vim-javascript'
   Plug 'valloric/youcompleteme'
   Plug 'jiangmiao/auto-pairs'
   Plug 'junegunn/vim-easy-align'
-
+  Plug 'vim-scripts/YankRing.vim'
+  
   " code display
   Plug 'nathanaelkane/vim-indent-guides'
   Plug 'felixhummel/setcolors.vim'
@@ -24,6 +25,7 @@ call plug#begin()
   " integration
   Plug 'w0rp/ale'
   Plug 'christoomey/vim-tmux-navigator'
+  Plug 'tpope/vim-fugitive'
 call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
