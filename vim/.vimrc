@@ -12,12 +12,14 @@ call plug#begin()
   Plug 'pangloss/vim-javascript'
   Plug 'valloric/youcompleteme'
   Plug 'jiangmiao/auto-pairs'
+  Plug 'junegunn/vim-easy-align'
 
   " code display
   Plug 'nathanaelkane/vim-indent-guides'
-  Plug 'flazz/vim-colorschemes'
   Plug 'felixhummel/setcolors.vim'
   Plug 'danilo-augusto/vim-afterglow'
+  Plug 'sickill/vim-monokai'
+  Plug 'morhetz/gruvbox'
 
   " integration
   Plug 'w0rp/ale'
@@ -133,7 +135,7 @@ set number
 syntax enable 
 
 set t_Co=256
-colorscheme afterglow
+colorscheme gruvbox
 set background=dark
 
 " Set extra options when running in GUI mode
@@ -406,3 +408,12 @@ let g:NERDTreeWinSize=35
 map <leader>nn :NERDTreeToggle<cr>
 map <leader>nb :NERDTreeFromBookmark<Space>
 map <leader>nf :NERDTreeFind<cr>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Easy Align
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
