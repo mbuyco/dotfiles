@@ -21,6 +21,7 @@ call plug#begin()
   Plug 'danilo-augusto/vim-afterglow'
   Plug 'sickill/vim-monokai'
   Plug 'morhetz/gruvbox'
+  Plug 'ayu-theme/ayu-vim'
 
   " integration
   Plug 'w0rp/ale'
@@ -137,8 +138,10 @@ set number
 syntax enable 
 
 set t_Co=256
-colorscheme gruvbox
 set background=dark
+set termguicolors     " enable true colors support
+let ayucolor="dark"   " for dark version of theme
+colorscheme ayu
 
 " Set extra options when running in GUI mode
 if has("gui_running")
