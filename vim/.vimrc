@@ -22,6 +22,7 @@ call plug#begin()
   Plug 'sickill/vim-monokai'
   Plug 'morhetz/gruvbox'
   Plug 'ayu-theme/ayu-vim'
+  Plug 'crusoexia/vim-monokai'
 
   " integration
   Plug 'w0rp/ale'
@@ -137,11 +138,9 @@ set number
 " Enable syntax highlighting
 syntax enable 
 
-set t_Co=256
 set background=dark
-set termguicolors     " enable true colors support
-let ayucolor="dark"   " for dark version of theme
-colorscheme ayu
+set termguicolors
+colorscheme monokai
 
 " Set extra options when running in GUI mode
 if has("gui_running")
@@ -422,3 +421,12 @@ xmap ga <Plug>(EasyAlign)
 
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => YouCompleteMe
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" If you prefer the Omni-Completion tip window to close when a selection is
+" made, these lines close it on movement in insert mode or when leaving
+" insert mode
+autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
+autocmd InsertLeave * if pumvisible() == 0|pclose|endif
