@@ -11,5 +11,7 @@ alias gf "git fetch; git pull"
 alias gst "git stash"
 alias gco "git checkout"
 alias gb "git branch"
-# fish refresh
 alias gr "git reset"
+
+# virtualfish
+eval (python -m virtualfish)

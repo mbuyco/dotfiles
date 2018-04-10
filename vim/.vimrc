@@ -34,6 +34,9 @@ call plug#end()
 " => General
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+" Set the clipboard as the default register
+set clipboard=unnamedplus
+
 " Sets how many lines of history VIM has to remember
 set history=500
 
