@@ -19,7 +19,6 @@ call plug#begin()
   Plug 'nathanaelkane/vim-indent-guides'
   Plug 'felixhummel/setcolors.vim'
   Plug 'danilo-augusto/vim-afterglow'
-  Plug 'sickill/vim-monokai'
   Plug 'morhetz/gruvbox'
   Plug 'ayu-theme/ayu-vim'
   Plug 'crusoexia/vim-monokai'
