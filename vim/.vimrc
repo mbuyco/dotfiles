@@ -22,6 +22,7 @@ call plug#begin()
   Plug 'morhetz/gruvbox'
   Plug 'ayu-theme/ayu-vim'
   Plug 'crusoexia/vim-monokai'
+  Plug 'crusoexia/vim-dracula'
 
   " integration
   Plug 'w0rp/ale'
@@ -142,7 +143,7 @@ syntax enable
 
 set background=dark
 set termguicolors
-colorscheme monokai
+colorscheme dracula
 
 " Set extra options when running in GUI mode
 if has("gui_running")
