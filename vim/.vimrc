@@ -14,6 +14,7 @@ call plug#begin()
   Plug 'jiangmiao/auto-pairs'
   Plug 'junegunn/vim-easy-align'
   Plug 'vim-scripts/YankRing.vim'
+  Plug 'vim-syntastic/syntastic'
   
   " code display
   Plug 'nathanaelkane/vim-indent-guides'
@@ -23,9 +24,9 @@ call plug#begin()
   Plug 'ayu-theme/ayu-vim'
   Plug 'crusoexia/vim-monokai'
   Plug 'crusoexia/vim-dracula'
+  Plug 'nanotech/jellybeans.vim'
 
   " integration
-  Plug 'w0rp/ale'
   Plug 'christoomey/vim-tmux-navigator'
   Plug 'tpope/vim-fugitive'
 call plug#end()
@@ -143,7 +144,7 @@ syntax enable
 
 set background=dark
 set termguicolors
-colorscheme dracula
+colorscheme afterglow
 
 " Set extra options when running in GUI mode
 if has("gui_running")
@@ -178,7 +179,7 @@ set expandtab
 " Be smart when using tabs ;)
 set smarttab
 
-" 1 tab == 4 spaces
+" 1 tab == 2 spaces
 set shiftwidth=2
 set tabstop=2
 
