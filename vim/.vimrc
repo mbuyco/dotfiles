@@ -14,11 +14,9 @@ call plug#begin()
   Plug 'jiangmiao/auto-pairs'
   Plug 'junegunn/vim-easy-align'
   Plug 'vim-scripts/YankRing.vim'
-  Plug 'vim-syntastic/syntastic'
   
   " code display
   Plug 'nathanaelkane/vim-indent-guides'
-  Plug 'felixhummel/setcolors.vim'
   Plug 'danilo-augusto/vim-afterglow'
   Plug 'morhetz/gruvbox'
   Plug 'ayu-theme/ayu-vim'
@@ -27,7 +25,7 @@ call plug#begin()
   Plug 'nanotech/jellybeans.vim'
 
   " integration
-  Plug 'christoomey/vim-tmux-navigator'
+  Plug 'w0rp/ale'
   Plug 'tpope/vim-fugitive'
 call plug#end()
 
@@ -66,10 +64,10 @@ command W w !sudo tee % > /dev/null
 set so=7
 
 " Avoid garbled characters in Chinese language windows OS
-let $LANG='en' 
-set langmenu=en
-source $VIMRUNTIME/delmenu.vim
-source $VIMRUNTIME/menu.vim
+"let $LANG='en' 
+"set langmenu=en
+"source $VIMRUNTIME/delmenu.vim
+"source $VIMRUNTIME/menu.vim
 
 " Turn on the Wild menu
 set wildmenu
@@ -144,7 +142,7 @@ syntax enable
 
 set background=dark
 set termguicolors
-colorscheme afterglow
+colorscheme jellybeans
 
 " Set extra options when running in GUI mode
 if has("gui_running")
@@ -400,7 +398,7 @@ map <leader>f :MRU<CR>
 let g:ctrlp_working_path_mode = 0
 
 let g:ctrlp_map = '<c-f>'
-map <leader>j :CtrlP<cr>
+"map <leader>j :CtrlP<cr>
 map <c-b> :CtrlPBuffer<cr>
 
 let g:ctrlp_max_height = 20
@@ -434,16 +432,3 @@ nmap ga <Plug>(EasyAlign)
 " insert mode
 autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Syntastic
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_javascript_checkers = ['eslint']
