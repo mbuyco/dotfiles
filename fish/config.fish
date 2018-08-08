@@ -13,6 +13,9 @@ alias gco "git checkout"
 alias gb "git branch"
 alias gr "git reset"
 
+alias flame_on "sudo dscl . -append /groups/admin GroupMembership mldrbuyco"
+alias flame_off "sudo dscl . -delete /groups/admin GroupMembership mldrbuyco"
+
 # virtualfish
 eval (python -m virtualfish)
 

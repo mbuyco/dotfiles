@@ -142,7 +142,7 @@ syntax enable
 
 set background=dark
 set termguicolors
-colorscheme jellybeans
+colorscheme gruvbox
 
 " Set extra options when running in GUI mode
 if has("gui_running")
