@@ -14,6 +14,7 @@ call plug#begin()
   Plug 'jiangmiao/auto-pairs'
   Plug 'junegunn/vim-easy-align'
   Plug 'vim-scripts/YankRing.vim'
+  Plug 'heavenshell/vim-jsdoc'
   
   " code display
   Plug 'nathanaelkane/vim-indent-guides'
