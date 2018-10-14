@@ -15,6 +15,7 @@ call plug#begin()
   Plug 'junegunn/vim-easy-align'
   Plug 'vim-scripts/YankRing.vim'
   Plug 'heavenshell/vim-jsdoc'
+  Plug 'mxw/vim-jsx'
   
   " code display
   Plug 'nathanaelkane/vim-indent-guides'
@@ -143,7 +144,7 @@ syntax enable
 
 set background=dark
 set termguicolors
-colorscheme gruvbox
+colorscheme jellybeans
 
 " Set extra options when running in GUI mode
 if has("gui_running")
