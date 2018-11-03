@@ -25,6 +25,7 @@ call plug#begin()
   Plug 'crusoexia/vim-monokai'
   Plug 'crusoexia/vim-dracula'
   Plug 'nanotech/jellybeans.vim'
+  Plug 'altercation/vim-colors-solarized'
 
   " integration
   Plug 'w0rp/ale'
@@ -144,7 +145,7 @@ syntax enable
 
 set background=dark
 set termguicolors
-colorscheme jellybeans
+colorscheme solarized
 
 " Set extra options when running in GUI mode
 if has("gui_running")
