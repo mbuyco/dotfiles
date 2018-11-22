@@ -22,3 +22,5 @@ eval (python -m virtualfish)
 # set npm modules PATH
 set fish_user_paths (npm config get prefix)/lib/node_modules
 
+# set NVM_DIR
+set -gx NVM_DIR $HOME/.nvm

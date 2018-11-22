@@ -145,7 +145,7 @@ syntax enable
 
 set background=dark
 set termguicolors
-colorscheme solarized
+colorscheme afterglow
 
 " Set extra options when running in GUI mode
 if has("gui_running")
@@ -435,3 +435,9 @@ nmap ga <Plug>(EasyAlign)
 " insert mode
 autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => jsdoc.vim
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nmap <silent> <C-i> <Plug>(jsdoc)
