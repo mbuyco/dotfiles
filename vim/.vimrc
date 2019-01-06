@@ -436,9 +436,3 @@ nmap ga <Plug>(EasyAlign)
 " insert mode
 autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => jsdoc.vim
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"nmap <silent> <C-i> <Plug>(jsdoc)
