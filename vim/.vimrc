@@ -17,6 +17,7 @@ call plug#begin()
   Plug 'vim-scripts/YankRing.vim'
   Plug 'heavenshell/vim-jsdoc'
   Plug 'mxw/vim-jsx'
+  Plug 'mattn/emmet-vim'
   
   " code display
   Plug 'nathanaelkane/vim-indent-guides'
