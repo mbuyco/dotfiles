@@ -10,6 +10,7 @@ call plug#begin()
   " syntax, code completion, others
   Plug 'scrooloose/nerdcommenter'
   Plug 'pangloss/vim-javascript'
+  Plug 'leafgarland/typescript-vim'
   Plug 'valloric/youcompleteme'
   Plug 'jiangmiao/auto-pairs'
   Plug 'junegunn/vim-easy-align'
@@ -440,4 +441,4 @@ autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => jsdoc.vim
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nmap <silent> <C-i> <Plug>(jsdoc)
+"nmap <silent> <C-i> <Plug>(jsdoc)
