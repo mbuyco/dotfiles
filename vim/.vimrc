@@ -10,6 +10,7 @@ call plug#begin()
   " syntax, code completion, others
   Plug 'scrooloose/nerdcommenter'
   Plug 'pangloss/vim-javascript'
+  Plug 'cakebaker/scss-syntax.vim'
   Plug 'leafgarland/typescript-vim'
   Plug 'valloric/youcompleteme'
   Plug 'jiangmiao/auto-pairs'
