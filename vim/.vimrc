@@ -21,7 +21,6 @@ call plug#begin()
   Plug 'mattn/emmet-vim'
   
   " code display
-  Plug 'nathanaelkane/vim-indent-guides'
   Plug 'danilo-augusto/vim-afterglow'
   Plug 'morhetz/gruvbox'
   Plug 'ayu-theme/ayu-vim'
@@ -444,8 +443,3 @@ autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Workaround for vim cursor disappearing on ALE errors
 let g:ale_echo_cursor = 0
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Indent Guides
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:indent_guides_enable_on_vim_startup = 1
