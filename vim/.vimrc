@@ -148,7 +148,7 @@ syntax enable
 
 set background=dark
 set termguicolors
-colorscheme afterglow
+colorscheme monokai
 
 " Set extra options when running in GUI mode
 if has("gui_running")
@@ -438,3 +438,15 @@ nmap ga <Plug>(EasyAlign)
 " insert mode
 autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => ALE
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Workaround for vim cursor disappearing on ALE errors
+let g:ale_echo_cursor = 0
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Indent Guides
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set ts=2 sw=2 et
+let g:indent_guides_start_level = 2
