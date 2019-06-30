@@ -22,7 +22,6 @@ call plug#begin()
   Plug 'elixir-editors/vim-elixir'
   
   " code display
-  Plug 'nathanaelkane/vim-indent-guides'
   Plug 'danilo-augusto/vim-afterglow'
   Plug 'morhetz/gruvbox'
   Plug 'ayu-theme/ayu-vim'
@@ -149,7 +148,7 @@ syntax enable
 
 set background=dark
 set termguicolors
-colorscheme jellybeans
+colorscheme monokai
 
 " Set extra options when running in GUI mode
 if has("gui_running")
@@ -439,3 +438,9 @@ nmap ga <Plug>(EasyAlign)
 " insert mode
 autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => ALE
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Workaround for vim cursor disappearing on ALE errors
+let g:ale_echo_cursor = 0
