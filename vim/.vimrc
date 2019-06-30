@@ -19,6 +19,7 @@ call plug#begin()
   Plug 'heavenshell/vim-jsdoc'
   Plug 'mxw/vim-jsx'
   Plug 'mattn/emmet-vim'
+  Plug 'elixir-editors/vim-elixir'
   
   " code display
   Plug 'nathanaelkane/vim-indent-guides'
@@ -40,7 +41,7 @@ call plug#end()
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Set the clipboard as the default register
-set clipboard=unnamedplus
+set clipboard=unnamed
 
 " Sets how many lines of history VIM has to remember
 set history=500
@@ -148,7 +149,7 @@ syntax enable
 
 set background=dark
 set termguicolors
-colorscheme afterglow
+colorscheme jellybeans
 
 " Set extra options when running in GUI mode
 if has("gui_running")
