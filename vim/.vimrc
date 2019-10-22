@@ -20,6 +20,7 @@ call plug#begin()
   Plug 'mxw/vim-jsx'
   Plug 'mattn/emmet-vim'
   Plug 'elixir-editors/vim-elixir'
+  Plug 'posva/vim-vue'
   
   " code display
   Plug 'danilo-augusto/vim-afterglow'
@@ -148,7 +149,7 @@ syntax enable
 
 set background=dark
 set termguicolors
-colorscheme monokai
+colorscheme jellybeans
 
 " Set extra options when running in GUI mode
 if has("gui_running")
