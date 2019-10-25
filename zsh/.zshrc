@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/mike/.oh-my-zsh"
+export ZSH="/home/michael/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -97,9 +97,12 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias ebpdev="ssh -t lmsadmin@127.0.0.1 -p 5000 'cd /var/www; /usr/bin/zsh'"
+alias autossh-start="autossh -L localhost:5000:localhost:22 lmsadmin@151.106.38.236"
 
-export NVM_DIR="/home/mike/.nvm"
+export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # use vim as default text editor
 export VISUAL=vim
