@@ -1,5 +1,5 @@
 # load this file
-alias aliases="vim ~/.zsh_aliases"
+alias als="vim ~/.zsh_aliases"
 
 # restart zsh
 alias zshr="echo 'Restarting ZSH...'; source ~/.zshrc; echo '[DONE]';";
@@ -15,3 +15,5 @@ alias tmuxc="vim ~/.tmux.conf"
 
 # docker
 alias dcu="docker-compose up -d --build"
+alias dcd="docker-compose down"
+alias dcr="dcd && dcu"
