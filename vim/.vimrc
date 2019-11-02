@@ -21,6 +21,8 @@ call plug#begin()
   Plug 'mattn/emmet-vim'
   Plug 'elixir-editors/vim-elixir'
   Plug 'posva/vim-vue'
+  Plug 'Yggdroot/indentLine'
+  Plug 'jparise/vim-graphql'
   
   " code display
   Plug 'danilo-augusto/vim-afterglow'
@@ -186,7 +188,8 @@ set smarttab
 
 " 1 tab == 2 spaces
 set shiftwidth=2
-set tabstop=2
+set softtabstop=0
+set tabstop=8
 
 " Linebreak on 500 characters
 set lbr
@@ -444,4 +447,4 @@ autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 " => ALE
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Workaround for vim cursor disappearing on ALE errors
-let g:ale_echo_cursor = 0
+"let g:ale_echo_cursor = 0
