@@ -5,8 +5,7 @@ alias als="vim ~/.zsh_aliases"
 alias zshr="echo 'Restarting ZSH...'; source ~/.zshrc; echo '[DONE]';";
 
 # ebp ssh
-alias ebpdev_ssh="ssh -t lmsadmin@127.0.0.1 -p 5000 'cd /var/www; /usr/bin/zsh'"
-alias ebpdev="echo 'Connecting to EBP...'; autossh -L localhost:5000:localhost:22 lmsadmin@151.106.38.236 -V && ebpdev_ssh"
+alias ebpdev="echo 'Connecting to EBP...'; autossh -M 5000:22 lmsadmin@151.106.38.236"
 
 # convenience
 alias zshc="vim ~/.zshrc"
