@@ -1,3 +1,9 @@
+# Go to dotfiles folder
+alias godot="cd ~/dotfiles";
+#
+# composer using docker container
+alias composer="docker run --rm -v $(pwd):/app composer/composer";
+#
 # load this file
 alias als="vim ~/.zsh_aliases"
 
@@ -15,10 +21,10 @@ alias tmuxc="vim ~/.tmux.conf"
 # docker
 alias dps="docker ps"
 alias dr="docker run"
-alias dsa="docker stop $(dps -q)"
-alias dka="docker kill $(dps -q)"
-alias drma="docker rm $(dps -a -q)"
-alias drmi="docker rmi $(docker images -q)"
+alias dsa="docker stop \$(dps -q)"
+alias dka="docker kill \$(dps -q)"
+alias drma="docker rm \$(dps -a -q)"
+alias drmi="docker rmi \$(docker images -q)"
 
 # docker-compose
 alias dc="docker-compose"
