@@ -1,14 +1,13 @@
-# Go to dotfiles folder
+# dotfiles
 alias godot="cd ~/dotfiles";
-#
-# composer using docker container
-alias composer="docker run --rm -v $(pwd):/app composer/composer";
-#
-# load this file
-alias als="vim ~/.zsh_aliases"
+alias udot="godot && gst && gc; echo '\nYOU ARE NOW IN DOTFILES! PLEASE CHECK CHANGES ABOVE.'";
 
-# restart zsh
+# composer using docker container
+alias composer="docker run --rm -v $(pwd):/app composer/composer:alpine";
+
+# zsh
 alias zshr="echo 'Restarting ZSH...'; source ~/.zshrc; echo '[DONE]';";
+alias als="vim ~/.zsh_aliases"
 
 # ebp ssh
 alias ebpdev="echo 'Connecting to EBP...'; autossh -M 5000:22 lmsadmin@151.106.38.236"
