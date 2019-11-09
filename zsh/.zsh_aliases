@@ -2,9 +2,6 @@
 alias godot="cd ~/dotfiles";
 alias udot="godot && gst && gc; echo '\nYOU ARE NOW IN DOTFILES! PLEASE CHECK CHANGES ABOVE.'";
 
-# composer using docker container
-alias composer="docker run --rm -v $(pwd):/app composer/composer:alpine";
-
 # zsh
 alias zshr="echo 'Restarting ZSH...'; source ~/.zshrc; echo '[DONE]';";
 alias als="vim ~/.zsh_aliases"
@@ -32,3 +29,6 @@ alias dcd="dc down"
 alias dcr="dcd && dcu"
 alias dcc="dc config"
 alias dx="dc exec"
+
+# ssh to aws
+alias awssh="ssh -i /home/luntian/gorillaprep-key.pem mike@13.52.209.52"
