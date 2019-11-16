@@ -448,3 +448,9 @@ autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Workaround for vim cursor disappearing on ALE errors
 "let g:ale_echo_cursor = 0
+
+" File type specific indentation rules
+augroup FileTypeSpecificAutocommands
+  autocmd FileType javascript setlocal tabstop=2 softtabstop=2 shiftwidth=2
+  autocmd FileType php setlocal tabstop=4 softtabstop=4 shiftwidth=4
+augroup END
