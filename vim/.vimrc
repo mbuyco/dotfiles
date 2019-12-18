@@ -34,7 +34,7 @@ call plug#begin()
   Plug 'altercation/vim-colors-solarized'
 
   " integration
-  Plug 'w0rp/ale'
+  Plug 'dense-analysis/ale'
   Plug 'tpope/vim-fugitive'
 call plug#end()
 
