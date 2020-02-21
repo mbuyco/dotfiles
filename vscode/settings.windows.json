@@ -1,0 +1,19 @@
+{
+    "workbench.colorTheme": "Solarized Dark",
+    "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
+    "window.zoomLevel": 0,
+    "editor.fontFamily": "Operator Mono",
+    "editor.minimap.enabled": false,
+    "[javascript]": {
+        "editor.detectIndentation": false,
+        "editor.tabSize": 2
+    },
+    "[vue]": {
+        "editor.detectIndentation": false,
+        "editor.tabSize": 2
+    },
+    "[php]": {
+        "editor.tabSize": 4
+    },
+    "files.eol": "\n"
+}
