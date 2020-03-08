@@ -24,14 +24,16 @@ call plug#begin()
   Plug 'Yggdroot/indentLine'
   Plug 'jparise/vim-graphql'
   
-  " code display
+  " color schemes
   Plug 'danilo-augusto/vim-afterglow'
+  Plug 'sts10/vim-pink-moon'
   Plug 'morhetz/gruvbox'
   Plug 'ayu-theme/ayu-vim'
   Plug 'crusoexia/vim-monokai'
   Plug 'crusoexia/vim-dracula'
   Plug 'nanotech/jellybeans.vim'
   Plug 'altercation/vim-colors-solarized'
+  Plug 'zacanger/angr.vim'
 
   " integration
   Plug 'dense-analysis/ale'
@@ -151,7 +153,7 @@ syntax enable
 
 set background=dark
 set termguicolors
-colorscheme jellybeans
+colorscheme angr
 
 " Set extra options when running in GUI mode
 if has("gui_running")
