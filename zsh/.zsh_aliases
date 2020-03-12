@@ -1,3 +1,6 @@
+# godcuts (god shortcuts)
+alias s="cd ~/dev && tmux"
+
 # dotfiles
 alias godot="cd ~/dotfiles";
 alias udot="godot && gst && gc; echo '\nYOU ARE NOW IN DOTFILES! PLEASE CHECK CHANGES ABOVE.'";
