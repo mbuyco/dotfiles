@@ -42,3 +42,7 @@ alias ydlm="youtube-dl --extract-audio --audio-format mp3"
 # aws-cli
 alias awscc="aws codecommit"
 alias awscp="awscc create-pull-request"
+
+# notes
+NOTES_FILENAME="notes-$(date +%Y%m%d).txt"
+alias notes="mkdir ~/notes; touch ~/notes/${NOTES_FILENAME}; cd ~/notes; vim ~/notes/${NOTES_FILENAME}"
