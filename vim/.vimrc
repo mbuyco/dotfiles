@@ -34,6 +34,7 @@ call plug#begin()
   Plug 'nanotech/jellybeans.vim'
   Plug 'altercation/vim-colors-solarized'
   Plug 'zacanger/angr.vim'
+  Plug 'hzchirs/vim-material'
 
   " integration
   Plug 'dense-analysis/ale'
@@ -153,7 +154,7 @@ syntax enable
 
 set background=dark
 set termguicolors
-colorscheme angr
+colorscheme gruvbox
 
 " Set extra options when running in GUI mode
 if has("gui_running")
