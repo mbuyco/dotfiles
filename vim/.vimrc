@@ -23,6 +23,12 @@ call plug#begin()
   Plug 'posva/vim-vue'
   Plug 'Yggdroot/indentLine'
   Plug 'jparise/vim-graphql'
+  Plug 'leafgarland/typescript-vim'
+  Plug 'mxw/vim-jsx'
+  Plug 'peitalin/vim-jsx-typescript'
+  Plug 'prettier/vim-prettier', {
+    \ 'do': 'npm install',
+    \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
   
   " color schemes
   Plug 'danilo-augusto/vim-afterglow'
@@ -96,7 +102,7 @@ endif
 set ruler
 
 " Height of the command bar
-set cmdheight=2
+set cmdheight=1
 
 " A buffer becomes hidden when it is abandoned
 set hid
@@ -154,7 +160,7 @@ syntax enable
 
 set background=dark
 set termguicolors
-colorscheme gruvbox
+colorscheme afterglow
 
 " Set extra options when running in GUI mode
 if has("gui_running")
@@ -457,3 +463,18 @@ augroup FileTypeSpecificAutocommands
   autocmd FileType javascript setlocal tabstop=2 softtabstop=2 shiftwidth=2
   autocmd FileType php setlocal tabstop=4 softtabstop=4 shiftwidth=4
 augroup END
+
+let g:ale_sign_error = '●' " Less aggressive than the default '>>'
+let g:ale_sign_warning = '.'
+let g:ale_lint_on_enter = 0 " Less distracting when opening a new file
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Emmet
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:user_emmet_leader_key='<Tab>'
+let g:user_emmet_settings = {
+  \  'javascript.jsx' : {
+    \      'extends' : 'jsx',
+    \  },
+  \}
