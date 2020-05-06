@@ -1,5 +1,6 @@
 # godcuts (god shortcuts)
 alias s="cd ~/dev && tmux"
+alias c="clear"
 
 # dotfiles
 alias godot="cd ~/dotfiles";
