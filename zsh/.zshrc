@@ -109,3 +109,6 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}"  ] && printf %s "${HOME}/.nvm" || p
 # use vim as default text editor
 export VISUAL=vim
 export EDITOR="$VISUAL"
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
