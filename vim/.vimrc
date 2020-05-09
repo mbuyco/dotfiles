@@ -26,6 +26,7 @@ call plug#begin()
   Plug 'leafgarland/typescript-vim'
   Plug 'mxw/vim-jsx'
   Plug 'peitalin/vim-jsx-typescript'
+  Plug 'vim-ruby/vim-ruby'
   Plug 'prettier/vim-prettier', {
     \ 'do': 'npm install',
     \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
