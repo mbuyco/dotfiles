@@ -37,3 +37,6 @@ alias awscp="awscc create-pull-request"
 # notes
 NOTES_FILENAME="notes-$(date +%Y%m%d).txt"
 alias notes="mkdir ~/notes; touch ~/notes/${NOTES_FILENAME}; cd ~/notes; vim ~/notes/${NOTES_FILENAME}"
+
+# jekyll
+alias jk="jekyll"
