@@ -160,8 +160,9 @@ set number
 syntax enable 
 
 set background=dark
-set termguicolors
 colorscheme afterglow
+hi Normal ctermbg=None
+"set termguicolors
 
 " Set extra options when running in GUI mode
 if has("gui_running")
@@ -464,11 +465,6 @@ augroup FileTypeSpecificAutocommands
   autocmd FileType javascript setlocal tabstop=2 softtabstop=2 shiftwidth=2
   autocmd FileType php setlocal tabstop=4 softtabstop=4 shiftwidth=4
 augroup END
-
-let g:ale_sign_error = '●' " Less aggressive than the default '>>'
-let g:ale_sign_warning = '.'
-let g:ale_lint_on_enter = 0 " Less distracting when opening a new file
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Emmet
