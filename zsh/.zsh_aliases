@@ -19,10 +19,10 @@ alias vimc="vim ~/.vimrc"
 alias tmuxc="vim ~/.tmux.conf"
 
 # replace docker with podman
-alias docker="podman"
+#alias docker="podman"
 
 # replace docker-compose with podman-compose
-alias docker-compose="podman-compose"
+#alias docker-compose="podman-compose"
 
 # ssh to aws
 alias awssh="ssh -i /home/luntian/gorillaprep-key.pem mike@13.52.209.52"

@@ -72,6 +72,7 @@ plugins=(
   git
   docker
   docker-compose
+  taskwarrior
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -112,3 +113,6 @@ export EDITOR="$VISUAL"
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
+
+# Add local bin
+export PATH="$PATH:$HOME/.local/bin"

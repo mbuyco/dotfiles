@@ -27,9 +27,6 @@ call plug#begin()
   Plug 'mxw/vim-jsx'
   Plug 'peitalin/vim-jsx-typescript'
   Plug 'vim-ruby/vim-ruby'
-  Plug 'prettier/vim-prettier', {
-    \ 'do': 'npm install',
-    \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
   
   " color schemes
   Plug 'danilo-augusto/vim-afterglow'
@@ -46,6 +43,7 @@ call plug#begin()
   " integration
   Plug 'dense-analysis/ale'
   Plug 'tpope/vim-fugitive'
+  Plug 'editorconfig/editorconfig-vim'
 call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -160,7 +158,7 @@ set number
 syntax enable 
 
 set background=dark
-colorscheme afterglow
+colorscheme monokai
 hi Normal ctermbg=None
 "set termguicolors
 
@@ -465,6 +463,18 @@ augroup FileTypeSpecificAutocommands
   autocmd FileType javascript setlocal tabstop=2 softtabstop=2 shiftwidth=2
   autocmd FileType php setlocal tabstop=4 softtabstop=4 shiftwidth=4
 augroup END
+
+" Set javascript linter
+let g:ale_fixers = {
+\ 'javascript': ['eslint']
+\ }
+
+" Set linter symbols
+let g:ale_sign_error = '❌'
+let g:ale_sign_warning = '⚠️'
+
+" Fix on save
+let g:ale_fix_on_save = 1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Emmet
