@@ -1,5 +1,5 @@
 # godcuts (god shortcuts)
-alias s="cd ~/dev && tmux"
+alias tm="tmux"
 alias c="clear"
 
 # dotfiles
