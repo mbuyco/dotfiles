@@ -73,6 +73,7 @@ plugins=(
   docker
   docker-compose
   taskwarrior
+  zsh-autosuggestions
 )
 
 source $ZSH/oh-my-zsh.sh
