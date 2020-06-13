@@ -39,6 +39,7 @@ call plug#begin()
   Plug 'altercation/vim-colors-solarized'
   Plug 'zacanger/angr.vim'
   Plug 'hzchirs/vim-material'
+  Plug 'owickstrom/vim-colors-paramount'
 
   " integration
   Plug 'dense-analysis/ale'
