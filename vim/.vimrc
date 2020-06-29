@@ -8,25 +8,13 @@ call plug#begin()
   Plug 'vim-scripts/mru.vim'
 
   " syntax, code completion, others
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
+  Plug 'sheerun/vim-polyglot'
   Plug 'scrooloose/nerdcommenter'
-  Plug 'pangloss/vim-javascript'
-  Plug 'cakebaker/scss-syntax.vim'
-  Plug 'leafgarland/typescript-vim'
-  Plug 'valloric/youcompleteme'
   Plug 'jiangmiao/auto-pairs'
-  Plug 'junegunn/vim-easy-align'
   Plug 'vim-scripts/YankRing.vim'
-  Plug 'heavenshell/vim-jsdoc'
-  Plug 'mxw/vim-jsx'
   Plug 'mattn/emmet-vim'
-  Plug 'elixir-editors/vim-elixir'
-  Plug 'posva/vim-vue'
   Plug 'Yggdroot/indentLine'
-  Plug 'jparise/vim-graphql'
-  Plug 'leafgarland/typescript-vim'
-  Plug 'mxw/vim-jsx'
-  Plug 'peitalin/vim-jsx-typescript'
-  Plug 'vim-ruby/vim-ruby'
   
   " color schemes
   Plug 'danilo-augusto/vim-afterglow'
@@ -69,7 +57,7 @@ set autoread
 let mapleader = "\<Tab>"
 
 " Fast saving
-nmap <leader>w :w!<cr>
+nmap <C-S> :up<CR>
 
 " :W sudo saves the file
 " (useful for handling the permission-denied error)
@@ -78,8 +66,8 @@ command W w !sudo tee % > /dev/null
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Set 7 lines to the cursor - when moving vertically using j/k
-set so=7
+" Set cursor to middle - when moving vertically using j/k
+set so=999
 
 " Avoid garbled characters in Chinese language windows OS
 "let $LANG='en' 
@@ -105,7 +93,7 @@ set ruler
 set cmdheight=1
 
 " A buffer becomes hidden when it is abandoned
-set hid
+set hidden
 
 " Configure backspace so it acts as it should act
 set backspace=eol,start,indent
@@ -129,11 +117,6 @@ set lazyredraw
 " For regular expressions turn magic on
 set magic
 
-" Show matching brackets when text indicator is over them
-set showmatch 
-" How many tenths of a second to blink when matching brackets
-set mat=2
-
 " No annoying sound on errors
 set noerrorbells
 set novisualbell
@@ -145,23 +128,31 @@ if has("gui_macvim")
     autocmd GUIEnter * set vb t_vb=
 endif
 
-
-" Add a bit extra margin to the left
-set foldcolumn=1
-
 " Set line numbers
 set number
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Enable syntax highlighting
-syntax enable 
 
+" Vim mode
+set nocompatible
+
+" force 256 colors on the terminal
+set t_Co=256
+
+" Enable syntax highlighting
+syntax on 
+
+" Colorscheme
+colorscheme paramount
+
+" Background color
 set background=dark
-colorscheme monokai
-hi Normal ctermbg=None
-"set termguicolors
+
+" Highlight cursor line
+set cursorline
+hi CursorLine cterm=NONE ctermbg=234 ctermfg=NONE guibg=grey40
 
 " Set extra options when running in GUI mode
 if has("gui_running")
@@ -177,19 +168,19 @@ set encoding=utf8
 " Use Unix as the standard file type
 set ffs=unix,dos,mac
 
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Files, backups and undo
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 " Turn backup off, since most stuff is in SVN, git et.c anyway...
 set nobackup
 set nowb
 set noswapfile
 
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text, tab and indent related
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 " Use spaces instead of tabs
 set expandtab
 
@@ -209,22 +200,22 @@ set ai "Auto indent
 set si "Smart indent
 set wrap "Wrap lines
 
-
 """"""""""""""""""""""""""""""
 " => Visual mode related
 """"""""""""""""""""""""""""""
+
 " Visual mode pressing * or # searches for the current selection
 " Super useful! From an idea by Michael Naumann
 vnoremap <silent> * :<C-u>call VisualSelection('', '')<CR>/<C-R>=@/<CR><CR>
 vnoremap <silent> # :<C-u>call VisualSelection('', '')<CR>?<C-R>=@/<CR><CR>
 
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Moving around, tabs, windows and buffers
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 " Map <Space> to / (search) and Ctrl-<Space> to ? (backwards search)
 map <space> /
-map <c-space> ?
+map <leader><space> ?
 
 " Disable highlight when <leader><cr> is pressed
 map <silent> <leader><cr> :noh<cr>
@@ -235,8 +226,8 @@ map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 
-" Close the current buffer
-map <leader>bd :Bclose<cr>:tabclose<cr>gT
+" Close current buffer
+map <leader>bd :bd<cr>
 
 " Close all the buffers
 map <leader>ba :bufdo bd<cr>
@@ -256,7 +247,6 @@ let g:lasttab = 1
 nmap <Leader>tl :exe "tabn ".g:lasttab<CR>
 au TabLeave * let g:lasttab = tabpagenr()
 
-
 " Opens a new tab with the current buffer's path
 " Super useful when editing files in the same directory
 map <leader>te :tabedit <c-r>=expand("%:p:h")<cr>/
@@ -274,35 +264,11 @@ endtry
 " Return to last edit position when opening files (You want this!)
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
-
-""""""""""""""""""""""""""""""
-" => Status line
-""""""""""""""""""""""""""""""
-" Always show the status line
-set laststatus=2
-
-" Format the status line
-set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l\ \ Column:\ %c
-
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Editing mappings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Remap VIM 0 to first non-blank character
 map 0 ^
-
-" Move a line of text using ALT+[jk] or Command+[jk] on mac
-nmap <M-j> mz:m+<cr>`z
-nmap <M-k> mz:m-2<cr>`z
-vmap <M-j> :m'>+<cr>`<my`>mzgv`yo`z
-vmap <M-k> :m'<-2<cr>`>my`<mzgv`yo`z
-
-if has("mac") || has("macunix")
-  nmap <D-j> <M-j>
-  nmap <D-k> <M-k>
-  vmap <D-j> <M-j>
-  vmap <D-k> <M-k>
-endif
 
 " Delete trailing white space on save, useful for some filetypes ;)
 fun! CleanExtraSpaces()
@@ -317,10 +283,10 @@ if has("autocmd")
     autocmd BufWritePre *.txt,*.js,*.py,*.wiki,*.sh,*.coffee :call CleanExtraSpaces()
 endif
 
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Spell checking
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 " Pressing ,ss will toggle and untoggle spell checking
 map <leader>ss :setlocal spell!<cr>
 
@@ -330,10 +296,10 @@ map <leader>sp [s
 map <leader>sa zg
 map <leader>s? z=
 
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Misc
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 " Remove the Windows ^M - when the encodings gets messed up
 noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 
@@ -346,10 +312,10 @@ map <leader>x :e ~/buffer.md<cr>
 " Toggle paste mode on and off
 map <leader>pp :setlocal paste!<cr>
 
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Helper functions
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 " Returns true if paste mode is enabled
 function! HasPaste()
     if &paste
@@ -358,67 +324,23 @@ function! HasPaste()
     return ''
 endfunction
 
-" Don't close window, when deleting a buffer
-command! Bclose call <SID>BufcloseCloseIt()
-function! <SID>BufcloseCloseIt()
-   let l:currentBufNum = bufnr("%")
-   let l:alternateBufNum = bufnr("#")
-
-   if buflisted(l:alternateBufNum)
-     buffer #
-   else
-     bnext
-   endif
-
-   if bufnr("%") == l:currentBufNum
-     new
-   endif
-
-   if buflisted(l:currentBufNum)
-     execute("bdelete! ".l:currentBufNum)
-   endif
-endfunction
-
-function! CmdLine(str)
-    exe "menu Foo.Bar :" . a:str
-    emenu Foo.Bar
-    unmenu Foo
-endfunction 
-
-function! VisualSelection(direction, extra_filter) range
-    let l:saved_reg = @"
-    execute "normal! vgvy"
-
-    let l:pattern = escape(@", "\\/.*'$^~[]")
-    let l:pattern = substitute(l:pattern, "\n$", "", "")
-
-    if a:direction == 'gv'
-        call CmdLine("Ack '" . l:pattern . "' " )
-    elseif a:direction == 'replace'
-        call CmdLine("%s" . '/'. l:pattern . '/')
-    endif
-
-    let @/ = l:pattern
-    let @" = l:saved_reg
-endfunction
-
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Plugin config
 "
 """"""""""""""""""""""""""""""
 " => MRU plugin
 """"""""""""""""""""""""""""""
+
 let MRU_Max_Entries = 400
 map <leader>f :MRU<CR>
 
 """"""""""""""""""""""""""""""
 " => CTRL-P
 """"""""""""""""""""""""""""""
+
 let g:ctrlp_working_path_mode = 0
 
 let g:ctrlp_map = '<c-f>'
-"map <leader>j :CtrlP<cr>
 map <c-b> :CtrlPBuffer<cr>
 
 let g:ctrlp_max_height = 20
@@ -427,6 +349,7 @@ let g:ctrlp_custom_ignore = 'node_modules\|^\.DS_Store\|^\.git\|^\.coffee'
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Nerd Tree
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 let g:NERDTreeWinPos = "left"
 let NERDTreeShowHidden=0
 let NERDTreeIgnore = ['\.pyc$', '__pycache__']
@@ -436,17 +359,9 @@ map <leader>nb :NERDTreeFromBookmark<Space>
 map <leader>nf :NERDTreeFind<cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Easy Align
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Start interactive EasyAlign in visual mode (e.g. vipga)
-xmap ga <Plug>(EasyAlign)
-
-" Start interactive EasyAlign for a motion/text object (e.g. gaip)
-nmap ga <Plug>(EasyAlign)
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => YouCompleteMe
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 " If you prefer the Omni-Completion tip window to close when a selection is
 " made, these lines close it on movement in insert mode or when leaving
 " insert mode
@@ -456,6 +371,7 @@ autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => ALE
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 " Workaround for vim cursor disappearing on ALE errors
 "let g:ale_echo_cursor = 0
 
@@ -471,8 +387,8 @@ let g:ale_fixers = {
 \ }
 
 " Set linter symbols
-let g:ale_sign_error = '❌'
-let g:ale_sign_warning = '⚠️'
+"let g:ale_sign_error = '❌'
+"let g:ale_sign_warning = '⚠️'
 
 " Fix on save
 let g:ale_fix_on_save = 1
@@ -480,9 +396,57 @@ let g:ale_fix_on_save = 1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Emmet
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 let g:user_emmet_leader_key='<Tab>'
 let g:user_emmet_settings = {
   \  'javascript.jsx' : {
     \      'extends' : 'jsx',
     \  },
   \}
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Vim airline
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Set statusline to be on top
+let g:airline_statusline_ontop=1
+
+" Use powerline fonts
+let g:airline_powerline_fonts = 1
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => COC
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
+" " delays and poor user experience.
+set updatetime=300
+
+" Don't pass messages to |ins-completion-menu|.
+set shortmess+=c
+
+" Use tab for trigger completion with characters ahead and navigate.
+" " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
+" " other plugin before putting this into your config.
+inoremap <silent><expr> <TAB>
+  \ pumvisible() ? "\<C-n>" :
+  \ <SID>check_back_space() ? "\<TAB>" :
+  \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+" Use <c-space> to trigger completion.
+inoremap <silent><expr> <c-space> coc#refresh()
+
+" Use <cr> to confirm completion, `<C-g>u` means break undo chain at current
+" position. Coc only does snippet and additional edit on confirm.
+" <cr> could be remapped by other vim plugin, try `:verbose imap <CR>`.
+if exists('*complete_info')
+  inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
+else
+  inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+endif
