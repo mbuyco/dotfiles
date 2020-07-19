@@ -41,3 +41,6 @@ alias notes="mkdir ~/notes; touch ~/notes/${NOTES_FILENAME}; cd ~/notes; vim ~/n
 
 # jekyll
 alias jk="jekyll"
+
+# git
+alias gg="git grep"
