@@ -150,6 +150,9 @@ colorscheme paramount
 " Background color
 set background=dark
 
+" Transparent background
+hi Normal ctermbg=None
+
 " Highlight cursor line
 set cursorline
 hi CursorLine cterm=NONE ctermbg=234 ctermfg=NONE guibg=grey40
@@ -182,15 +185,22 @@ set noswapfile
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Use spaces instead of tabs
-set expandtab
+"set expandtab
 
 " Be smart when using tabs ;)
 set smarttab
 
 " 1 tab == 2 spaces
-set shiftwidth=2
-set softtabstop=0
-set tabstop=8
+"set shiftwidth=2
+"set softtabstop=0
+"set tabstop=8
+
+" use tabs instead of spaces (4 tabs)
+set autoindent noexpandtab tabstop=4 shiftwidth=4
+
+" highlight tab indents
+set listchars=tab:\|\ 
+set list
 
 " Linebreak on 500 characters
 set lbr
