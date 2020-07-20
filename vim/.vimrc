@@ -6,6 +6,7 @@ call plug#begin()
   Plug 'bling/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
   Plug 'vim-scripts/mru.vim'
+  Plug 'christoomey/vim-tmux-navigator'
 
   " syntax, code completion, others
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
