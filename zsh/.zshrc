@@ -116,3 +116,6 @@ export PATH="$PATH:$HOME/.rvm/bin"
 
 # Add local bin
 export PATH="$PATH:$HOME/.local/bin"
+
+# `Frozing' tty, so after any command terminal settings will be restored
+stty -ixon

@@ -59,6 +59,8 @@ let mapleader = "\<Tab>"
 
 " Fast saving
 nmap <C-S> :up<CR>
+vmap <C-S> <C-C>:up<CR>
+imap <C-S> <C-O>:up<CR>
 
 " :W sudo saves the file
 " (useful for handling the permission-denied error)
