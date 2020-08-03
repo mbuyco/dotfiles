@@ -1,90 +1,82 @@
 #!/bin/bash
 
 function abort_if_error() {
-
-if [ $? -gt 0 ]; then
-	exit $?
-fi
-
+	if [ $? -gt 0 ]; then
+		exit $?
+	fi
 }
 
 function package_manager() {
+	cat /etc/*-release | grep fedora
 
-cat /etc/*-release | grep fedora
+	if [ $? -eq 0 ]; then
+		echo "dnf"
+		return 0
+	fi
 
-if [ $? -eq 0 ]; then
-	echo "dnf"
-	return 0
-fi
-
-echo "apt"
-
+	echo "apt"
 }
 
 function install_node() {
+	if [ -s "$HOME/.nvm" ]; then
+		return 0
+	fi
 
-if [ -s "$HOME/.nvm" ]; then
-	return 0
-fi
+	# Install nvm with curl
+	curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
 
-# Install nvm with curl
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+	# Load nvm
+	export NVM_DIR="$HOME/.nvm"
+	[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
-# Load nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+	# Install latest node version
+	nvm install --lts
 
-# Install latest node version
-nvm install --lts
-
-abort_if_error
-
+	abort_if_error
 }
 
 function install_shell() {
+	# Install oh-my-zsh
+	git clone https://github.com/ohmyzsh/ohmyzsh.git "$HOME/.oh-my-zsh"
 
-# Install oh-my-zsh
-git clone https://github.com/ohmyzsh/ohmyzsh.git "$HOME/.oh-my-zsh"
+	if [ -s "$HOME/.zshrc" ]; then
+		return 0
+	fi
 
-if [ -s "$HOME/.zshrc" ]; then
-	return 0
-fi
+	sudo ln -s "$HOME/dotfiles/zsh/.zshrc" "$HOME/.zshrc"
+	sudo ln -s "$HOME/dotfiles/zsh/.zsh_aliases" "$HOME/.zsh_aliases"
 
-ln -s "$HOME/dotfiles/zsh/.zshrc" "$HOME/.zshrc"
-ln -s "$HOME/dotfiles/zsh/.zsh_aliases" "$HOME/.zsh_aliases"
+	source "$HOME/.zshrc"
 
-source "$HOME/.zshrc"
-
-chsh -s $(which zsh)
-
+	chsh -s $(which zsh)
 }
 
 function install_tmux() {
+	# Install tmux plugin manager
+	git clone https://github.com/tmux-plugins/tpm "$HOME/.tmux/plugins/tpm"
 
-# Install tmux plugin manager
-git clone https://github.com/tmux-plugins/tpm "$HOME/.tmux/plugins/tpm"
+	# Copy tmux config
+	sudo ln -s "$HOME/dotfiles/tmux/.tmux.conf" "$HOME/.tmux.conf"
 
-# Copy tmux config
-ln -s "$HOME/dotfiles/tmux/.tmux.conf" "$HOME/.tmux.conf"
+	# Set tmux config
+	tmux source "$HOME/.tmux.conf"
 
-# Install tmux plugins
-tmux start-server && \
-tmux new-session -d && \
-sleep 1 && \
-~/.tmux/plugins/tpm/scripts/install_plugins.sh && \
-tmux kill-server
-
+	# Install tmux plugins
+	tmux start-server && \
+	tmux new-session -d && \
+	sleep 1 && \
+	~/.tmux/plugins/tpm/scripts/install_plugins.sh && \
+	tmux kill-server
 }
 
 function install_vim() {
-
 
 # Install vim-plug
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 	https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 # Install vim config and plugins
-ln -s "$HOME/dotfiles/vim/.vimrc" "$HOME/.vimrc"
+sudo ln -s "$HOME/dotfiles/vim/.vimrc" "$HOME/.vimrc"
 vim +PlugInstall
 
 }
@@ -96,7 +88,7 @@ else
 fi
 
 # Install prerequisites
-sudo $(package_manager) install -y curl git vim tmux zsh $powerline_fonts
+sudo $(package_manager) install -y curl git vim tmux zsh xclip $powerline_fonts
 
 echo "Setting up node environment..."
 install_node
