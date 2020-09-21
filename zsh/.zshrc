@@ -119,3 +119,6 @@ export PATH="$PATH:$HOME/.local/bin"
 
 # `Frozing' tty, so after any command terminal settings will be restored
 stty -ixon
+
+# Add rbenv to path
+export PATH="$HOME/.rbenv/bin:$PATH"
