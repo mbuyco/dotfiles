@@ -16,6 +16,7 @@ call plug#begin()
   Plug 'vim-scripts/YankRing.vim'
   Plug 'mattn/emmet-vim'
   Plug 'Yggdroot/indentLine'
+  Plug 'vim-scripts/DetectIndent'
   
   " color schemes
   Plug 'danilo-augusto/vim-afterglow'
@@ -148,7 +149,7 @@ set t_Co=256
 syntax on 
 
 " Colorscheme
-colorscheme paramount
+colorscheme angr
 
 " Background color
 set background=dark
@@ -188,18 +189,18 @@ set noswapfile
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Use spaces instead of tabs
-"set expandtab
+set expandtab
 
 " Be smart when using tabs ;)
 set smarttab
 
 " 1 tab == 2 spaces
-"set shiftwidth=2
-"set softtabstop=0
-"set tabstop=8
+set shiftwidth=4
+set softtabstop=0
+set tabstop=4
 
 " use tabs instead of spaces (4 tabs)
-set autoindent noexpandtab tabstop=4 shiftwidth=4
+"set autoindent noexpandtab tabstop=4 shiftwidth=4
 
 " highlight tab indents
 set listchars=tab:\|\ 
@@ -212,6 +213,9 @@ set tw=500
 set ai "Auto indent
 set si "Smart indent
 set wrap "Wrap lines
+
+" Autodetect indentation in file (uncomment to enable)
+" autocmd BufReadPost * :DetectIndent
 
 """"""""""""""""""""""""""""""
 " => Visual mode related
