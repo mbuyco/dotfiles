@@ -33,3 +33,7 @@ alias notes="mkdir ~/notes; touch ~/notes/$NOTES_FILENAME; cd ~/notes; vim ~/not
 
 # jekyll
 alias jk="jekyll"
+
+# taskwarrior
+alias t="task"
+alias tb="task burndown.daily"
