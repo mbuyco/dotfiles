@@ -17,6 +17,7 @@ call plug#begin()
   Plug 'mattn/emmet-vim'
   Plug 'Yggdroot/indentLine'
   Plug 'vim-scripts/DetectIndent'
+  Plug 'junegunn/vim-emoji'
   
   " color schemes
   Plug 'danilo-augusto/vim-afterglow'
@@ -133,7 +134,13 @@ if has("gui_macvim")
 endif
 
 " Set line numbers
-set number
+set number relativenumber
+
+augroup numbertoggle
+    autocmd!
+    autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+    autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+augroup END
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
@@ -203,8 +210,8 @@ set tabstop=4
 "set autoindent noexpandtab tabstop=4 shiftwidth=4
 
 " highlight tab indents
-set listchars=tab:\|\ 
-set list
+"set listchars=tab:\|\ 
+"set list
 
 " Linebreak on 500 characters
 set lbr
