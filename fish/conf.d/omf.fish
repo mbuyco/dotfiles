@@ -5,3 +5,6 @@ set -q XDG_DATA_HOME
 
 # Load Oh My Fish configuration.
 source $OMF_PATH/init.fish
+
+# Load rbenv
+status --is-interactive; and source (rbenv init -|psub)

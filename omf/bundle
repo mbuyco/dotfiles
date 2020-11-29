@@ -3,5 +3,6 @@ package foreign-env
 package nvm
 theme default
 theme fishbone
-theme mokou
+theme godfather
 theme nai
+theme robbyrussell
