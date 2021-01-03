@@ -37,3 +37,12 @@ alias jk="jekyll"
 # taskwarrior
 alias t="task"
 alias tb="task burndown.daily"
+
+# dbm
+alias wpw="cat ~/Dropbox/Michael\ Buyco/PW/passwords"
+
+# python
+alias python="python3"
+
+# fd
+alias fd="fdfind"

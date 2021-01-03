@@ -1,13 +1,13 @@
 " my plugins
 call plug#begin()
   " navigation
-  Plug 'scrooloose/nerdtree'
+  Plug 'preservim/nerdtree' |
+    \ Plug 'Xuyuanp/nerdtree-git-plugin'
   Plug 'kien/ctrlp.vim'
   Plug 'bling/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
   Plug 'vim-scripts/mru.vim'
   Plug 'christoomey/vim-tmux-navigator'
-  Plug 'francoiscabrol/ranger.vim'
 
   " syntax, code completion, others
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -32,6 +32,7 @@ call plug#begin()
   Plug 'zacanger/angr.vim'
   Plug 'hzchirs/vim-material'
   Plug 'owickstrom/vim-colors-paramount'
+  Plug 'Rigellute/shades-of-purple.vim'
 
   " integration
   Plug 'dense-analysis/ale'
@@ -157,7 +158,7 @@ set t_Co=256
 syntax on 
 
 " Colorscheme
-colorscheme angr
+colorscheme afterglow
 
 " Background color
 set background=dark
@@ -434,7 +435,7 @@ let g:user_emmet_settings = {
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Set statusline to be on top
-let g:airline_statusline_ontop=1
+"let g:airline_statusline_ontop=1
 
 " Use powerline fonts
 let g:airline_powerline_fonts = 1
