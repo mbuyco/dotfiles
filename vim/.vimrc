@@ -407,9 +407,16 @@ augroup FileTypeSpecificAutocommands
   autocmd FileType php setlocal tabstop=4 softtabstop=4 shiftwidth=4
 augroup END
 
-" Set javascript linter
+" Set linters
+let g:ale_linters = {
+\ 'javascript': ['eslint'],
+\ 'python': ['pylint']
+}
+
+" Set fixers
 let g:ale_fixers = {
-\ 'javascript': ['eslint']
+\ 'javascript': ['eslint'],
+\ 'python': ['pylint']
 \ }
 
 " Set linter symbols
