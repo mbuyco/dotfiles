@@ -7,6 +7,6 @@ bass source $HOME/dotfiles/aliases/git
 export PATH="$PATH:$HOME/.local/bin"
 
 # export rbenv
-if [ -d "$HOME/.rbenv/bin" ];
+if [ -d "$HOME/.rbenv/bin" ]
     export PATH="$PATH:$HOME/.rbenv/bin"
 end

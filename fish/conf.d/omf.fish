@@ -7,4 +7,6 @@ set -q XDG_DATA_HOME
 source $OMF_PATH/init.fish
 
 # Load rbenv
-status --is-interactive; and source (rbenv init -|psub)
+if [ -d "$HOME/.rbenv/bin" ]
+  status --is-interactive; and source (rbenv init -|psub)
+end
