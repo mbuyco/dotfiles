@@ -27,8 +27,8 @@
     statusline_unicode_symbols = false
     # Enable vim compatible mode, avoid changing origin vim key bindings
     vimcompatible = true
-
-    bootstrap_before = "myspacevim#before"
+    filetree_direction = "left"
+    filemanager="defx"
 
 # Enable autocomplete layer
 [[layers]]
@@ -43,3 +43,10 @@ default_height = 30
 
 [[layers]]
 name = "tmux"
+
+[[layers]]
+name = "denite"
+
+[[layers]]
+name = "lang#python"
+python_interpreter = "/usr/bin/python3"
