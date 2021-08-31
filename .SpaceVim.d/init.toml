@@ -32,21 +32,32 @@
 
 # Enable autocomplete layer
 [[layers]]
-name = 'autocomplete'
-auto_completion_return_key_behavior = "complete"
-auto_completion_tab_key_behavior = "cycle"
+  name = 'autocomplete'
+  auto_completion_return_key_behavior = "complete"
+  auto_completion_tab_key_behavior = "cycle"
 
 [[layers]]
-name = 'shell'
-default_position = 'bottom'
-default_height = 30
+  name = 'shell'
+  default_position = 'bottom'
+  default_height = 30
 
 [[layers]]
-name = "tmux"
+  name = "tmux"
 
 [[layers]]
-name = "denite"
+  name = "denite"
 
 [[layers]]
-name = "lang#python"
-python_interpreter = "/usr/bin/python3"
+  name = 'git'
+
+[[layers]]
+  name = 'VersionControl'
+
+# Python configuration
+[[layers]]
+  name = "lang#python"
+  python_interpreter = "/usr/bin/python3"
+
+# Java configuration
+[[layers]]
+  name = "lang#java"
