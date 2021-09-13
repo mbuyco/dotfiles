@@ -9,4 +9,8 @@ export PATH="$PATH:$HOME/.local/bin"
 # export rbenv
 if [ -d "$HOME/.rbenv/bin" ]
     export PATH="$PATH:$HOME/.rbenv/bin"
+
+    # Load rbenv automatically by appending
+    # the following to ~/.config/fish/config.fish:
+    status --is-interactive; and rbenv init - fish | source
 end
