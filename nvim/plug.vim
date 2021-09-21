@@ -5,6 +5,7 @@ call plug#begin(stdpath('data') . '/plugged')
     Plug 'preservim/nerdtree'
     Plug 'tpope/vim-fugitive'
     Plug 'Xuyuanp/nerdtree-git-plugin'
+    Plug 'wfxr/minimap.vim'
 
     " Colors
     Plug 'overcache/NeoSolarized'
