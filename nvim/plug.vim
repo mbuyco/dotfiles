@@ -9,6 +9,7 @@ call plug#begin(stdpath('data') . '/plugged')
 
     " Colors
     Plug 'overcache/NeoSolarized'
+    Plug 'joshdick/onedark.vim'
 
     if has('nvim')
         Plug 'hoob3rt/lualine.nvim'
