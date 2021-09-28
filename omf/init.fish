@@ -14,3 +14,7 @@ if [ -d "$HOME/.rbenv/bin" ]
     # the following to ~/.config/fish/config.fish:
     status --is-interactive; and rbenv init - fish | source
 end
+
+# for git default editor
+export VISUAL=vim
+export EDITOR="$VISUAL"
