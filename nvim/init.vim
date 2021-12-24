@@ -59,7 +59,7 @@ set wrap
 
 " 1 tab = 2 spaces
 set shiftwidth=4
-set softtabstop=0
+set softtabstop=4
 set tabstop=4
 
 " Ignore compiled files
