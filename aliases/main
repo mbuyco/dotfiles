@@ -53,3 +53,6 @@ then
     alias vim="nvim"
     alias nv="nvim"
 fi
+
+# ide
+alias ide="./dotfiles/tmux/layout-1.sh"

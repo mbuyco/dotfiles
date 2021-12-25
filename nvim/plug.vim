@@ -4,6 +4,7 @@ call plug#begin(stdpath('data') . '/plugged')
     Plug 'christoomey/vim-tmux-navigator'
     Plug 'preservim/nerdtree'
     Plug 'tpope/vim-fugitive'
+    Plug 'mattn/emmet-vim'
 
     " Colors
     Plug 'overcache/NeoSolarized'
