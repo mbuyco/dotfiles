@@ -1,6 +1,9 @@
 #!/bin/bash
 SESSION=$USER
 
+echo "Killing other tmux sessions..."
+tmux kill-server
+
 cd $HOME/notes
 tmux -2 new-session -d -s $SESSION
 tmux rename-window -t 0 'notes'

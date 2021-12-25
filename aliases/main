@@ -55,4 +55,4 @@ then
 fi
 
 # ide
-alias ide="./dotfiles/tmux/layout-1.sh"
+alias ide="$HOME/dotfiles/tmux/layout-1.sh"
