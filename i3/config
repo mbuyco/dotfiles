@@ -193,3 +193,7 @@ bar {
         -p root.path=/ time.format="%H:%M CW %V" date.format="%a, %b %d %Y" \
         -t solarized-powerline
 }
+
+# brightnessctl
+bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
+bindsym XF86MonBrightnessUp exec brightnessctl set 5%+
