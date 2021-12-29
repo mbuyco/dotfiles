@@ -11,6 +11,7 @@ call plug#begin(stdpath('data') . '/plugged')
     Plug 'joshdick/onedark.vim'
 
     if has('nvim')
+        Plug 'neoclide/coc.nvim', {'branch': 'release'}
         Plug 'neovim/nvim-lspconfig'
         Plug 'hoob3rt/lualine.nvim'
         Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }

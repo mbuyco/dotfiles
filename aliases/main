@@ -10,7 +10,7 @@ alias godot="cd ~/dotfiles";
 alias zshr="echo 'Restarting ZSH...'; source ~/.zshrc; echo '[DONE]';";
 alias als="vim ~/.zsh_aliases"
 
-# convenience
+# configs
 alias zshc="vim ~/.zshrc"
 alias vimc="vim ~/.vimrc"
 alias tmuxc="vim ~/.tmux.conf"
@@ -23,6 +23,9 @@ alias grep="grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,.idea,.tox}"
 
 # replace docker-compose with podman-compose
 #alias docker-compose="podman-compose"
+
+# tmux
+alias tmk="tmux kill-server"
 
 # youtube-dl
 alias ydlm="youtube-dl --extract-audio --audio-format mp3"
