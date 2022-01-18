@@ -5,6 +5,7 @@ call plug#begin(stdpath('data') . '/plugged')
     Plug 'jiangmiao/auto-pairs'
     Plug 'mattn/emmet-vim'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    Plug 'preservim/nerdcommenter'
     Plug 'preservim/nerdtree'
     Plug 'tpope/vim-fugitive'
 
