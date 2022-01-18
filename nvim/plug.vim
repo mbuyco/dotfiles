@@ -5,6 +5,7 @@ call plug#begin(stdpath('data') . '/plugged')
     Plug 'preservim/nerdtree'
     Plug 'tpope/vim-fugitive'
     Plug 'mattn/emmet-vim'
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
     " Colors
     Plug 'overcache/NeoSolarized'
