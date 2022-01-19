@@ -4,6 +4,7 @@ call plug#begin(stdpath('data') . '/plugged')
     Plug 'christoomey/vim-tmux-navigator'
     Plug 'jiangmiao/auto-pairs'
     Plug 'mattn/emmet-vim'
+    Plug 'mhinz/vim-startify'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'preservim/nerdcommenter'
     Plug 'preservim/nerdtree'
