@@ -7,7 +7,7 @@ require'lualine'.setup {
     disabled_filetypes = {}
   },
   sections = {
-    lualine_a = {'mode'},
+    lualine_a = {'mode', 'g:coc_status', 'bo:filetype'},
     lualine_b = {'branch'},
     lualine_c = {'filename'},
     lualine_x = {'encoding', 'fileformat', 'filetype'},

@@ -8,7 +8,7 @@ runtime ./plug.vim
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 
 " Colorscheme
-colorscheme onedark
+colorscheme oak
 
 " Enable filetype plugins
 filetype plugin on
@@ -51,11 +51,14 @@ set smartcase
 set smarttab
 set so=999
 set t_Co=256
-set termguicolors
 set tw=500
 set updatetime=300
 set wildmenu
 set wrap
+
+if (has("termguicolors"))
+    set termguicolors
+endif
 
 " 1 tab = 2 spaces
 set shiftwidth=4
