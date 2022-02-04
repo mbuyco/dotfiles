@@ -120,9 +120,10 @@ export PATH="$PATH:$HOME/.local/bin"
 # `Frozing' tty, so after any command terminal settings will be restored
 stty -ixon
 
-# Add rbenv to path and init
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+if [ -d "$HOME/.rbenv/bin" ]
+    export PATH="$PATH:$HOME/.rbenv/bin"
 
-# Add ruby-build to path
-export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
+    # Load rbenv automatically by appending
+    # the following to ~/.config/fish/config.fish:
+    status --is-interactive; and rbenv init - fish | source
+end
