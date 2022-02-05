@@ -34,3 +34,8 @@ NOTES_FILENAME="notes-$(date +%Y%m%d).txt"
 alias notes="mkdir ~/notes; touch ~/notes/$NOTES_FILENAME; cd ~/notes; vim ~/notes/$NOTES_FILENAME"
 
 alias ide="$HOME/dotfiles/tmux/layout-1.sh"
+
+if [ command -v nvim &> /dev/null ]; then
+    alias vim="nvim"
+    alias nv="nvim"
+fi
