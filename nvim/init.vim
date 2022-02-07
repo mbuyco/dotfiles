@@ -75,5 +75,8 @@ endif
 
 syntax on " Enable syntax highlighting
 
+" Remove trailing spaces on save
+autocmd BufWritePre * :%s/\s\+$//e
+
 " Include keymappings
 runtime ./maps.vim
