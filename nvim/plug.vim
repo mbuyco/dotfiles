@@ -17,11 +17,9 @@ call plug#begin(stdpath('data') . '/plugged')
     Plug 'vigoux/oak'
 
     if has('nvim')
-        Plug 'neoclide/coc.nvim', {'branch': 'release'}
         Plug 'hoob3rt/lualine.nvim'
         Plug 'ibhagwan/fzf-lua'
         Plug 'kyazdani42/nvim-web-devicons'
-        Plug 'neovim/nvim-lspconfig'
         Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
     endif
 call plug#end()
