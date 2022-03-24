@@ -5,7 +5,7 @@ call plug#begin(stdpath('data') . '/plugged')
     Plug 'jiangmiao/auto-pairs'
     Plug 'mattn/emmet-vim'
     Plug 'mhinz/vim-startify'
-    Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': 'yarn install --frozen-lockfile'}
     Plug 'preservim/nerdcommenter'
     Plug 'preservim/nerdtree'
     Plug 'tpope/vim-fugitive'

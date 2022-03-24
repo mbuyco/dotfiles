@@ -8,7 +8,7 @@ runtime ./plug.vim
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 
 " Colorscheme
-colorscheme oak
+colorscheme OceanicNext
 
 " Enable filetype plugins
 filetype plugin on
@@ -17,7 +17,7 @@ filetype indent on
 " Transparent background
 hi Normal ctermbg=None
 
-let mapleader = "\<Tab>" " Set the clipboard as the default register 
+let mapleader = "\<Tab>" " Set the clipboard as the default register
 
 set autoindent
 set autoread
