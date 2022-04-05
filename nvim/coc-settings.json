@@ -1,4 +1,8 @@
 {
     "java.home": "/usr/lib/jvm/java-11-openjdk-amd64",
-    "coc.preferences.jumpCommand": "vsplit"
+    "coc.preferences.jumpCommand": "vsplit",
+    "python.analysis.diagnosticSeverityOverrides": {
+      "reportGeneralTypeIssues": "none",
+      "reportPrivateImportUsage": "none"
+    }
 }
