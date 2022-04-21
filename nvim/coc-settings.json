@@ -4,5 +4,7 @@
     "python.analysis.diagnosticSeverityOverrides": {
       "reportGeneralTypeIssues": "none",
       "reportPrivateImportUsage": "none"
-    }
+    },
+    "python.linting.pylintEnabled": true,
+    "python.linting.pycodestyleEnabled": true
 }
