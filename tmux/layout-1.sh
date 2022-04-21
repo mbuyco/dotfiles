@@ -1,4 +1,6 @@
 #!/bin/bash
+
+CURRENT_DIR=$PWD
 SESSION=$USER
 
 echo "Killing other tmux sessions..."
@@ -12,9 +14,9 @@ if [ ! command -v notes &> /dev/null ]; then
     notes
 fi
 
-cd $HOME
+cd $CURRENT_DIR
 tmux new-window -t $SESSION:1 -n 'dev'
-tmux run-shell "cd $HOME"
+tmux run-shell "cd $CURRENT_DIR"
 tmux split-window -v
 tmux resize-pane -D 80
 tmux select-pane -t 0
