@@ -35,6 +35,9 @@ alias notes="mkdir ~/notes; touch ~/notes/$NOTES_FILENAME; cd ~/notes; vim ~/not
 
 alias ide="$HOME/dotfiles/tmux/layout-1.sh"
 
+# docker
+alias dps="docker ps"
+
 if command -v nvim &> /dev/null; then
     alias vim="nvim"
     alias nv="nvim"
