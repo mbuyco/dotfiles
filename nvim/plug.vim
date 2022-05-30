@@ -13,7 +13,10 @@ call plug#begin(stdpath('data') . '/plugged')
     " Colors
     Plug 'joshdick/onedark.vim'
     Plug 'mhartington/oceanic-next'
+    Plug 'morhetz/gruvbox'
     Plug 'overcache/NeoSolarized'
+    Plug 'sainnhe/everforest'
+    Plug 'tribela/vim-transparent'
     Plug 'vigoux/oak'
 
     if has('nvim')

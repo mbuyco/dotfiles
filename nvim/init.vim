@@ -7,8 +7,12 @@ runtime ./plug.vim
 " Return to last cursor position
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 
+" Everforest color config
+let g:everforest_background = 'soft'
+let g:everforest_better_performance = 1
+
 " Colorscheme
-colorscheme OceanicNext
+colorscheme everforest
 
 " Enable filetype plugins
 filetype plugin on
