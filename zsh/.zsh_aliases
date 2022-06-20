@@ -37,8 +37,12 @@ alias ide="$HOME/dotfiles/tmux/layout-1.sh"
 
 # docker
 alias dps="docker ps"
+alias docker-compose="docker compose"
 
 if command -v nvim &> /dev/null; then
     alias vim="nvim"
     alias nv="nvim"
 fi
+
+alias aws="docker run --rm -it -v ~/.aws:/root/.aws amazon/aws-cli"
+alias awsp="aws --profile personal"
