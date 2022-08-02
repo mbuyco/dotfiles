@@ -44,6 +44,3 @@ if command -v nvim &> /dev/null; then
     alias vim="nvim"
     alias nv="nvim"
 fi
-
-alias aws="docker compose -f $DOCKER_COMPOSE_ROOT/aws/docker-compose.yml run --rm aws"
-alias sam="docker compose -f $DOCKER_COMPOSE_ROOT/aws/docker-compose.yml run --rm sam"
