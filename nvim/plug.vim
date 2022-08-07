@@ -2,7 +2,6 @@ call plug#begin(stdpath('data') . '/plugged')
     " General
     Plug 'Xuyuanp/nerdtree-git-plugin'
     Plug 'christoomey/vim-tmux-navigator'
-    Plug 'jiangmiao/auto-pairs'
     Plug 'mattn/emmet-vim'
     Plug 'mhinz/vim-startify'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -24,5 +23,6 @@ call plug#begin(stdpath('data') . '/plugged')
         Plug 'ibhagwan/fzf-lua'
         Plug 'kyazdani42/nvim-web-devicons'
         Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
+        Plug 'windwp/nvim-autopairs'
     endif
 call plug#end()
