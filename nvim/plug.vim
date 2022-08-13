@@ -5,6 +5,7 @@ call plug#begin(stdpath('data') . '/plugged')
     Plug 'mattn/emmet-vim'
     Plug 'mhinz/vim-startify'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    Plug 'posva/vim-vue'
     Plug 'preservim/nerdcommenter'
     Plug 'preservim/nerdtree'
     Plug 'tpope/vim-fugitive'
