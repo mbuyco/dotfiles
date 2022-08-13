@@ -3,5 +3,5 @@ vim.api.nvim_set_keymap('n', '<c-P>',
     { noremap = true, silent = true })
 
 vim.api.nvim_set_keymap('n', '<c-F>',
-    "<cmd>lua require('fzf-lua').live_grep_native()<CR>",
+    "<cmd>lua require('fzf-lua').grep_project()<CR>",
     { noremap = true, silent = true })
