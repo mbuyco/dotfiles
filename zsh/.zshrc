@@ -116,3 +116,12 @@ source ~/.zsh_aliases
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
+
+# phpenv
+if [ -d "$HOME/.phpenv" ]
+then
+    export PATH="$HOME/.phpenv/bin:$PATH"
+    eval "$(phpenv init -)"
+fi
+
+! command -v rbenv >/dev/null || eval "$(rbenv init -)"
