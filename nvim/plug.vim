@@ -2,6 +2,7 @@ call plug#begin(stdpath('data') . '/plugged')
     " General
     Plug 'Xuyuanp/nerdtree-git-plugin'
     Plug 'christoomey/vim-tmux-navigator'
+    Plug 'hashivim/vim-terraform'
     Plug 'mattn/emmet-vim'
     Plug 'mhinz/vim-startify'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
