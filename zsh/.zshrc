@@ -123,5 +123,3 @@ then
     export PATH="$HOME/.phpenv/bin:$PATH"
     eval "$(phpenv init -)"
 fi
-
-! command -v rbenv >/dev/null || eval "$(rbenv init -)"
