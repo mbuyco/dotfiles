@@ -114,8 +114,11 @@ stty -ixon
 # Custom aliases
 source ~/.zsh_aliases
 export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
+if command -v pyenv > /dev/null; then
+    echo "pyenv"
+    eval "$(pyenv init -)"
+    export PATH="$PYENV_ROOT/bin:$PATH"
+fi
 
 # phpenv
 if [ -d "$HOME/.phpenv" ]
