@@ -11,8 +11,12 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 let g:everforest_background = 'soft'
 let g:everforest_better_performance = 1
 
+" Tokyonight color config
+let g:tokyonight_style = 'night' " available: night, storm
+let g:tokyonight_enable_italic = 1
+
 " Colorscheme
-colorscheme everforest
+colorscheme tokyonight
 
 " Enable filetype plugins
 filetype plugin on
