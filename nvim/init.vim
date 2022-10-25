@@ -16,6 +16,10 @@ let g:tokyonight_style = 'night' " available: night, storm
 let g:tokyonight_enable_italic = 1
 
 " Colorscheme
+if (has("termguicolors"))
+    set termguicolors
+endif
+
 colorscheme tokyonight
 
 " Enable filetype plugins
@@ -63,10 +67,6 @@ set tw=500
 set updatetime=300
 set wildmenu
 set wrap
-
-if (has("termguicolors"))
-    set termguicolors
-endif
 
 " 1 tab = 2 spaces
 set shiftwidth=4
