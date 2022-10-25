@@ -17,6 +17,7 @@ call plug#begin(stdpath('data') . '/plugged')
     Plug 'morhetz/gruvbox'
     Plug 'overcache/NeoSolarized'
     Plug 'sainnhe/everforest'
+    Plug 'tanvirtin/monokai.nvim'
     Plug 'tribela/vim-transparent'
     Plug 'vigoux/oak'
 
