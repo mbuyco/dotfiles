@@ -12,7 +12,6 @@ call plug#begin(stdpath('data') . '/plugged')
     Plug 'tpope/vim-fugitive'
 
     " Colors
-    Plug 'NLKNguyen/papercolor-theme'
     Plug 'joshdick/onedark.vim'
     Plug 'mhartington/oceanic-next'
     Plug 'morhetz/gruvbox'
