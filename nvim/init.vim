@@ -56,6 +56,7 @@ set noswapfile
 set novisualbell
 set nowb
 set number
+set relativenumber
 set ruler
 set shortmess+=c
 set si
