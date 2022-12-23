@@ -1,9 +1,10 @@
 let g:coc_global_extensions = [
-            \'coc-json',
             \'coc-git',
             \'coc-java',
-            \'coc-tsserver',
+            \'coc-json',
+            \'coc-phpls',
             \'coc-pyright',
+            \'coc-tsserver',
             \]
 
 " Some servers have issues with backup files, see #649.
