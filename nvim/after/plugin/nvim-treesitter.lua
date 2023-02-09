@@ -7,6 +7,7 @@ require'nvim-treesitter.configs'.setup {
         "php",
         "python",
         "ruby",
+        "vim",
         "yaml"
     }, -- one of "all", "maintained" (parsers with maintainers), or a list of languages
   highlight = {
