@@ -10,6 +10,7 @@ call plug#begin(stdpath('data') . '/plugged')
     Plug 'preservim/nerdcommenter'
     Plug 'preservim/nerdtree'
     Plug 'tpope/vim-fugitive'
+    Plug 'vimwiki/vimwiki'
 
     " Colors
     Plug 'ghifarit53/tokyonight-vim'
