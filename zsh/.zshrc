@@ -8,7 +8,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="arrow" # set by `omz`
+ZSH_THEME="minimal" # set by `omz`
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -107,12 +107,17 @@ export PATH="$PATH:$HOME/.rvm/bin"
 # Add local bin
 export PATH="$PATH:$HOME/.local/bin"
 
+# Add composer bin
+export PATH="$PATH:$HOME/.composer/vendor/bin"
+
 # `Frozing' tty, so after any command terminal settings will be restored
 stty -ixon
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Custom aliases
 source ~/.zsh_aliases
+
+# Pyenv path
 export PYENV_ROOT="$HOME/.pyenv"
 if command -v pyenv > /dev/null; then
     echo "pyenv"
@@ -120,9 +125,9 @@ if command -v pyenv > /dev/null; then
     export PATH="$PYENV_ROOT/bin:$PATH"
 fi
 
-# phpenv
-if [ -d "$HOME/.phpenv" ]
-then
-    export PATH="$HOME/.phpenv/bin:$PATH"
-    eval "$(phpenv init -)"
-fi
+# Php brew path
+[[ -e ~/.phpbrew/bashrc ]] && source ~/.phpbrew/bashrc
+
+# Skip puppeteer chromium installation
+export PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
+export PUPPETEER_EXECUTABLE_PATH=`which chromium`
