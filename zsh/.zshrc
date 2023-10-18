@@ -120,7 +120,6 @@ source ~/.zsh_aliases
 # Pyenv path
 export PYENV_ROOT="$HOME/.pyenv"
 if command -v pyenv > /dev/null; then
-    echo "pyenv"
     eval "$(pyenv init -)"
     export PATH="$PYENV_ROOT/bin:$PATH"
 fi
