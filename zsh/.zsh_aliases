@@ -46,8 +46,11 @@ if command -v nvim &> /dev/null; then
     alias nvl="nvim +'set background=light'"
 fi
 
-# get all modified files in git against a branch
-function git-diff-files() {
-    git diff --name-only $1...$(git rev-parse --abbrev-ref HEAD)
+# additional git aliases
+gdff() {
+    git --no-pager diff --name-only ${1:-master}...$(git rev-parse --abbrev-ref HEAD)
 }
-alias gdb="git-diff-files"
+
+gdc() {
+    git cherry -v ${1:-master} $(git rev-parse --abbrev-ref HEAD)
+}
