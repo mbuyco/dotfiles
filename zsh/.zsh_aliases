@@ -38,7 +38,10 @@ alias ide="$HOME/dotfiles/tmux/layout-1.sh"
 # docker
 DOCKER_COMPOSE_ROOT="$HOME/src/dev/docker/compose"
 alias dps="docker ps"
-alias docker-compose="docker compose"
+alias dc="docker compose || docker-compose"
+
+# go container
+alias go="docker run --user "$(id -u):$(id -g)" --rm -v $(pwd):/app -w /app golang:1.24 go"
 
 if command -v nvim &> /dev/null; then
     alias vim="nvim"
