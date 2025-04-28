@@ -41,7 +41,7 @@ alias dps="docker ps"
 alias dc="docker compose || docker-compose"
 
 # go container
-alias go="docker run --user "$(id -u):$(id -g)" --rm -v $(pwd):/app -w /app golang:1.24 go"
+alias go="docker run --rm -v $(pwd):/app -w /app golang:1.24 go"
 
 if command -v nvim &> /dev/null; then
     alias vim="nvim"
