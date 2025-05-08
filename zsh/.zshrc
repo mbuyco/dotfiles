@@ -131,3 +131,24 @@ fi
 # Skip puppeteer chromium installation
 export PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
 export PUPPETEER_EXECUTABLE_PATH=`which chromium`
+
+# Uncomment below until '---' to use vertical-aligned prompt
+# # Store previous cursor position
+# function preexec() {
+#   export __LAST_CURSOR_LINE=$(tput lines)
+# }
+#
+# # Move prompt to the bottom and align output above
+# function precmd() {
+#   local lines=$(tput lines)
+#   local prompt_line=$((lines - 1))
+#
+#   # Move cursor to bottom of terminal
+#   echo -ne "\033[${prompt_line};0H"
+#
+#   # Optional: draw a line above the prompt
+#   echo -ne "\033[1A"       # Move up one line
+#   echo -ne "\033[2K"       # Clear line
+#   echo -ne "\033[1B"       # Move back down
+# }
+# ---
