@@ -54,3 +54,19 @@ gdff() {
 gdc() {
     git cherry -v ${1:-master} $(git rev-parse --abbrev-ref HEAD)
 }
+
+nvc() {
+    local color="${1:-gruvbox}"
+    echo "return '$color'" > $HOME/.config/nvim/lua/color.lua
+}
+
+nvb() {
+    local bg="${1:-dark}"
+    echo "return '$bg'" > ${HOME}/.config/nvim/lua/background.lua
+}
+
+alias db="mycli -h localhost -uroot -ppassword db"
+alias db-prod="mycli -h 122.252.4.8 -P 42146 -ufoodbyus_prod_ro --ssh-config-path=~/.ssh/config db"
+alias d="/usr/local/bin/d"
+alias nvd="nvb dark"
+alias nvl="nvb light"
