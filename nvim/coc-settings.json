@@ -1,0 +1,13 @@
+{
+    "java.home": "/usr/lib/jvm/java-11-openjdk-amd64",
+    "coc.preferences.jumpCommand": "vsplit",
+    "python.analysis.diagnosticSeverityOverrides": {
+      "reportGeneralTypeIssues": "none",
+      "reportPrivateImportUsage": "none"
+    },
+    "pyright.inlayHints.functionReturnTypes": false,
+    "pyright.inlayHints.variableTypes": false,
+    "python.linting.pylintEnabled": true,
+    "python.linting.flake8Enabled": true,
+    "suggest.noselect": true
+}

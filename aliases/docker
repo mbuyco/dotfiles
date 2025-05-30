@@ -1,0 +1,7 @@
+alias dps="docker ps"
+
+alias dcupd="docker-compose up -d"
+alias dcupdb="docker-compose up -d --build"
+alias dce="docker-compose exec"
+alias dcl="docker-compose logs"
+alias dcdn="docker-compose down"
