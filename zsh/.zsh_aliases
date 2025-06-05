@@ -12,7 +12,7 @@ alias als="vim ~/.zsh_aliases"
 # configs
 alias zshc="vim ~/.zshrc"
 alias vimc="vim ~/.vimrc"
-alias tmuxc="vim ~/.tmux.conf"
+alias tmc="vim ~/.tmux.conf"
 
 # grep
 alias grep="grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,.idea,.tox}"
@@ -46,11 +46,28 @@ if command -v nvim &> /dev/null; then
     alias nvl="nvim +'set background=light'"
 fi
 
-# additional git aliases
+# git
 gdff() {
     git --no-pager diff --name-only ${1:-master}...$(git rev-parse --abbrev-ref HEAD)
 }
-
 gdc() {
     git cherry -v ${1:-master} $(git rev-parse --abbrev-ref HEAD)
 }
+
+# neovim
+nvb() {
+    local config_file="$HOME/.config/nvim/lua/background.lua"
+    if [ -r "$config_file" ] && [ -n "$1" ]; then
+        echo "return '$1'" > "$config_file"
+    fi
+}
+
+loop() {
+    local cmd="$1"
+    while true; do
+        eval "$cmd"
+    done
+}
+
+alias nvd="nvb dark"
+alias nvl="nvb light"
