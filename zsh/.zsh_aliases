@@ -58,15 +58,25 @@ gdc() {
 nvb() {
     local config_file="$HOME/.config/nvim/lua/background.lua"
     if [ -r "$config_file" ] && [ -n "$1" ]; then
+        echo "Changing neovim background to $1"
         echo "return '$1'" > "$config_file"
     fi
 }
 
-loop() {
-    local cmd="$1"
-    while true; do
-        eval "$cmd"
-    done
+nvc() {
+    local config_file="$HOME/.config/nvim/lua/color.lua"
+
+    if [ -r "$config_file" ]; then
+        if [ -z "$1" ]; then
+            echo "No colorscheme provided, defaulting to 'codedark'."
+            echo "return 'codedark'" > "$config_file"
+        else
+            echo "Changing neovim colorscheme to $1"
+            echo "return '$1'" > "$config_file"
+        fi
+    else
+        echo "No background configuration found."
+    fi
 }
 
 alias nvd="nvb dark"
