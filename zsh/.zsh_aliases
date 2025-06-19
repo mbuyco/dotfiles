@@ -81,3 +81,5 @@ nvc() {
 
 alias nvd="nvb dark"
 alias nvl="nvb light"
+
+alias d="/usr/local/bin/d"
