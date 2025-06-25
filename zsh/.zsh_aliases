@@ -81,3 +81,9 @@ nvc() {
 
 alias nvd="nvb dark"
 alias nvl="nvb light"
+
+# Github CLI / Copilot
+alias gh="docker-gh"
+alias ghc="gh copilot"
+alias ghce="ghc explain"
+alias ghcs="ghc suggest"
