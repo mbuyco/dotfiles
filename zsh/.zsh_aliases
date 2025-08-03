@@ -56,7 +56,7 @@ gdc() {
 
 # neovim
 nvb() {
-    local config_file="$HOME/.config/nvim/lua/background.lua"
+    local config_file="$HOME/.config/nvim/lua/config/background.lua"
     if [ -r "$config_file" ] && [ -n "$1" ]; then
         echo "Changing neovim background to $1"
         echo "return '$1'" > "$config_file"
@@ -64,7 +64,7 @@ nvb() {
 }
 
 nvc() {
-    local config_file="$HOME/.config/nvim/lua/color.lua"
+    local config_file="$HOME/.config/nvim/lua/config/color.lua"
 
     if [ -r "$config_file" ]; then
         if [ -z "$1" ]; then
@@ -87,3 +87,8 @@ alias gh="docker-gh"
 alias ghc="gh copilot"
 alias ghce="ghc explain"
 alias ghcs="ghc suggest"
+
+alias gi="npx https://github.com/google-gemini/gemini-cli"
+
+# Go
+alias go="docker run --rm -it -v $(pwd):/app -w /app golang:1.24-alpine go"
