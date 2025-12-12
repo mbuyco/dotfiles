@@ -94,5 +94,8 @@ alias gi="npx https://github.com/google-gemini/gemini-cli"
 # Coderabbit
 alias cb="coderabbit"
 
+# Opencode
+alias oc="opencode"
+
 # Go
 alias go="docker run --rm -it -v $(pwd):/app -w /app golang:1.24-alpine go"
