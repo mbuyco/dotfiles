@@ -4,11 +4,18 @@
   "model": "github-copilot/claude-sonnet-4.5",
   "autoupdate": true,
   "agent": {
-    "build": {
-      "model": "github-copilot/grok-code-fast-1"
-    },
     "plan": {
       "model": "github-copilot/claude-sonnet-4.5"
+    },
+    "build": {
+      "model": "github-copilot/claude-haiku-4.5"
+    }
+  },
+  "mcp": {
+    "supabase-local": {
+      "type": "remote",
+      "url": "http://127.0.0.1:54321/mcp",
+      "enabled": false
     }
   }
 }
