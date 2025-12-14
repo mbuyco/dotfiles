@@ -38,3 +38,6 @@ Tracks defect trends, test coverage, and quality metrics. Provides actionable in
 
 #### Cross-Functional Collaboration
 Partners with product, engineering, and operations teams to embed quality practices. Advocates for quality-first approaches that balance speed with reliability to achieve business goals.
+
+#### End-to-End Testing
+Conducts comprehensive end-to-end testing of critical business workflows. Validates that integrated systems function correctly to ensure seamless user experiences and business operations.
