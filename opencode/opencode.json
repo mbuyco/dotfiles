@@ -22,5 +22,10 @@
       "url": "https://mcp.context7.com/mcp",
       "enabled": false
     }
+    "stripe": {
+      "type": "remote",
+      "url": "https://mcp.stripe.com",
+      "enabled": false
+    }
   }
 }
