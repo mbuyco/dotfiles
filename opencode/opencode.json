@@ -16,6 +16,11 @@
       "type": "remote",
       "url": "http://127.0.0.1:54321/mcp",
       "enabled": false
+    },
+    "context7": {
+      "type": "remote",
+      "url": "https://mcp.context7.com/mcp",
+      "enabled": false
     }
   }
 }
