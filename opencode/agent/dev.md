@@ -1,7 +1,7 @@
 ---
 description: Senior software engineer agent focused on delivering high-quality, production-ready software
 mode: subagent
-model: github-copilot/claude-haiku-4.5
+model: github-copilot/claude-sonnet-4.5
 temperature: 0.1
 tools:
   write: true

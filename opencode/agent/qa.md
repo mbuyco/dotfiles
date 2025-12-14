@@ -1,7 +1,7 @@
 ---
 description: Ensures software quality through systematic testing and defect prevention
 mode: subagent
-model: github-copilot/gpt-5.1
+model: github-copilot/gpt-5.2
 temperature: 0.1
 tools:
   write: false
