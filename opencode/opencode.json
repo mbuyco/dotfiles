@@ -26,6 +26,11 @@
       "type": "remote",
       "url": "https://mcp.stripe.com",
       "enabled": false
+    },
+    "podman": {
+      "type": "local",
+      "command": ["npx", "-y", "podman-mcp-server@latest"],
+      "enabled": false
     }
   }
 }
