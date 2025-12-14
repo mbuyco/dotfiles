@@ -92,7 +92,7 @@ alias ghcs="ghc suggest"
 alias gi="npx https://github.com/google-gemini/gemini-cli"
 
 # Coderabbit
-alias cb="coderabbit"
+alias cr="coderabbit"
 
 # Opencode
 alias oc="opencode"
