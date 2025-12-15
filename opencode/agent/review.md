@@ -6,7 +6,7 @@ temperature: 0.1
 tools:
   write: false
   edit: false
-  bash: false
+  bash: true
 ---
 
 You are in code review mode. Focus on:
