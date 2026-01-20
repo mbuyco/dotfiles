@@ -117,7 +117,7 @@ export PATH="$PATH:$HOME/.composer/vendor/bin"
 export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
 
 # Add opencode path
-export PATH=/Users/mike/.opencode/bin:$PATH
+export PATH="$HOME/.opencode/bin:$PATH"
 
 # `Frozing' tty, so after any command terminal settings will be restored
 stty -ixon
