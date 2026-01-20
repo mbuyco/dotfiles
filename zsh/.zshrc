@@ -113,6 +113,12 @@ export PATH="$PATH:$HOME/.local/bin"
 # Add composer bin
 export PATH="$PATH:$HOME/.composer/vendor/bin"
 
+# Add neovim path
+export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
+
+# Add opencode path
+export PATH=/Users/mike/.opencode/bin:$PATH
+
 # `Frozing' tty, so after any command terminal settings will be restored
 stty -ixon
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
@@ -154,6 +160,3 @@ fi
 #   echo -ne "\033[1B"       # Move back down
 # }
 # ---
-
-# opencode
-export PATH=/Users/mike/.opencode/bin:$PATH

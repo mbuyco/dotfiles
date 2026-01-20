@@ -43,7 +43,6 @@ alias dc="docker compose || docker-compose"
 if command -v nvim &> /dev/null; then
     alias vim="nvim"
     alias nv="nvim"
-    alias nvl="nvim +'set background=light'"
 fi
 
 # git
