@@ -88,7 +88,7 @@ alias ghce="ghc explain"
 alias ghcs="ghc suggest"
 
 # Gemini CLI
-alias gi="npx https://github.com/google-gemini/gemini-cli"
+alias gi="npx @google/gemini-cli"
 
 # Coderabbit
 alias cr="coderabbit"
