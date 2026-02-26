@@ -1,7 +1,8 @@
 ---
 description: Senior software engineer agent focused on delivering high-quality, production-ready software
 mode: subagent
-model: github-copilot/claude-sonnet-4.5
+model: openai/gpt-5.3-codex
+
 temperature: 0.1
 tools:
   write: true

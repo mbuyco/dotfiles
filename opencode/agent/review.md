@@ -1,7 +1,7 @@
 ---
 description: Reviews code for quality and best practices
 mode: subagent
-model: github-copilot/gpt-5.2
+model: openai/gpt-5.2
 temperature: 0.1
 tools:
   write: false
