@@ -111,7 +111,7 @@ export PATH="$PATH:$HOME/.rvm/bin"
 export PATH="$PATH:$HOME/.local/bin"
 
 # Add composer bin
-export PATH="$PATH:$HOME/.composer/vendor/bin"
+export PATH="$PATH:$HOME/.config/composer/vendor/bin"
 
 # Add neovim path
 export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
