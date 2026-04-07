@@ -16,3 +16,10 @@ Generate a PR summary changes made in the codebase.
     - 🔑 Key Changes
     - 🧪 Testing
 - In the "Key Changes", explain each changes and files modified in a concise way, and include the file path for each change.
+
+**Parameters**
+
+- `source` - The source branch for the PR. If not provided, the current branch will be used.
+    - Example: `/PR_SUMMARY.md source=feature-branch`
+- `target` - The target branch for the PR. If not provided, the `main` or `master` branch will be used.
+    - Example: `/PR_SUMMARY.md target=main`
