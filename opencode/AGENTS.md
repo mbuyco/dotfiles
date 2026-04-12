@@ -12,3 +12,4 @@
 - When running commands that don't exit (e.g., servers, watchers), always run them in a detached mode or set a timeout to avoid hanging processes.
 - When writing code, always ensure it is well-documented and follows best practices.
 - Write code in a TDD (Test-Driven Development) manner, ensuring tests cover core business logic.
+- Use `caveman` skill when available.
