@@ -9,13 +9,14 @@ Generate a PR summary changes made in the codebase.
 **Rules:**
 
 - If user did not provide a source/target branch, use the current branch as the source and the `main` or `master` branch as the target.
-- Only include the staged git changes if it exists, otherwise use the current branch as a reference.
+- Do not include unstaged changes in the PR summary, only include staged changes if they exist, otherwise use the current branch changes from target branch as a reference.
 - Generate a PR summary with the following sections (including the emojis):
     - ❓ What
     - 🛠️ How
     - 🔑 Key Changes
-    - 🧪 Testing
+    - 🧪 QA Guidance (prefer with manual local testing guidance)
 - In the "Key Changes", explain each changes and files modified in a concise way, and include the file path for each change.
+- Do not mention any environment variables and configuration values. Always redact when necessary.
 
 **Parameters**
 
