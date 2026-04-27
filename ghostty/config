@@ -1,0 +1,7 @@
+cursor-style = block
+font-family = "Hack Nerd Font"
+font-size = 14
+scrollbar = never
+shell-integration-features = no-cursor
+theme = Catppuccin Latte
+window-theme = dark
