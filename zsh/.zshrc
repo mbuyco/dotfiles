@@ -160,3 +160,7 @@ fi
 #   echo -ne "\033[1B"       # Move back down
 # }
 # ---
+#
+export DOCKER_HOST=unix:/run/user/$(id -u)/podman/podman.sock
+fpath=(/home/mike/.zsh/completions $fpath)
+autoload -Uz compinit && compinit

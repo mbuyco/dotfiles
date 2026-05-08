@@ -18,10 +18,10 @@ alias tmc="vim ~/.tmux.conf"
 alias grep="grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,.idea,.tox}"
 
 # replace docker with podman
-#alias docker="podman"
+alias docker="podman"
 
 # replace docker-compose with podman-compose
-#alias docker-compose="podman-compose"
+alias docker-compose="podman-compose"
 
 # tmux
 alias tmk="tmux kill-server"
@@ -82,7 +82,6 @@ alias nvd="nvb dark"
 alias nvl="nvb light"
 
 # Github CLI / Copilot
-alias gh="docker-gh"
 alias ghc="gh copilot"
 alias ghce="ghc explain"
 alias ghcs="ghc suggest"
