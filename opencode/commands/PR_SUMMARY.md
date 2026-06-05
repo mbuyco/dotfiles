@@ -11,6 +11,7 @@ Generate a PR summary changes made in the codebase.
 - If user did not provide a source/target branch, use the current branch as the source and the `main` or `master` branch as the target.
 - Do not include unstaged changes in the PR summary, only include staged changes if they exist, otherwise use the current branch changes from target branch as a reference.
 - Generate a PR summary with the following sections (including the emojis):
+    - 📰 Summary
     - ❓ What
     - 🛠️ How
     - 🔑 Key Changes
