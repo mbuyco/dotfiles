@@ -1,6 +1,8 @@
-cursor-style = block
+﻿cursor-style = block
 font-family = "Ubuntu Mono Nerd Font"
-font-size = 14
+font-size = 12
+gtk-titlebar = false
+maximize = true
 scrollbar = never
 shell-integration-features = no-cursor
 theme = Catppuccin Mocha
