@@ -5,5 +5,5 @@ gtk-titlebar = false
 maximize = true
 scrollbar = never
 shell-integration-features = no-cursor
-theme = Catppuccin Mocha
+theme = war2-light
 window-theme = dark
