@@ -160,7 +160,13 @@ fi
 #   echo -ne "\033[1B"       # Move back down
 # }
 # ---
-#
-export DOCKER_HOST=unix:/run/user/$(id -u)/podman/podman.sock
+
+# Podman configuration
+# export DOCKER_HOST=unix:///run/user/$(id -u)/podman/podman.sock
+
+# Zsh completions
 fpath=(/home/mike/.zsh/completions $fpath)
 autoload -Uz compinit && compinit
+
+# Claude code router setup
+# export ANTHROPIC_BASE_URL="http://127.0.0.1:3456"
