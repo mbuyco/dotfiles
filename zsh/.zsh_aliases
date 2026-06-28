@@ -97,3 +97,6 @@ alias oc="opencode"
 
 # Go
 alias go="docker run --rm -it -v $(pwd):/app -w /app golang:1.24-alpine go"
+
+# Claude code
+alias cl="claude"
