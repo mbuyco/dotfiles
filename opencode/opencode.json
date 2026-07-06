@@ -24,5 +24,13 @@
       "enabled": false
     }
   },
-  "plugin": ["superpowers@git+https://github.com/obra/superpowers.git"]
+  "plugin": ["superpowers@git+https://github.com/obra/superpowers.git"],
+  "agent": {
+    "max_iterations": 12
+  },
+  "session": {
+    "retry": {
+      "maxAttempts": 3
+    }
+  }
 }
