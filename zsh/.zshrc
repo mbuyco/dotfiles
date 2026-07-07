@@ -170,3 +170,6 @@ autoload -Uz compinit && compinit
 
 # Claude code router setup
 # export ANTHROPIC_BASE_URL="http://127.0.0.1:3456"
+
+# Bun bin path
+# export PATH="/home/mike/.bun/bin:$PATH"
