@@ -20,9 +20,57 @@
     },
     "podman": {
       "type": "local",
-      "command": ["npx", "-y", "podman-mcp-server@latest"],
+      "command": [
+        "npx",
+        "-y",
+        "podman-mcp-server@latest"
+      ],
       "enabled": false
     }
   },
-  "plugin": ["superpowers@git+https://github.com/obra/superpowers.git"]
+  "plugin": [
+    "superpowers@git+https://github.com/obra/superpowers.git",
+    "oh-my-opencode-slim"
+  ],
+  "provider": {
+    "omniroute": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "OmniRoute",
+      "options": {
+        "baseURL": "http://localhost:20128/v1"
+      },
+      "models": {
+        "auto": {
+          "name": "OmniRoute Auto"
+        },
+        "auto/best-reasoning": {
+          "name": "OmniRoute Auto (Best Reasoning)"
+        },
+        "auto/best-coding": {
+          "name": "OmniRoute Auto (Best Coding)"
+        },
+        "auto/best-free": {
+          "name": "OmniRoute Auto (Best Free)"
+        },
+        "auto/coding": {
+          "name": "OmniRoute Auto (Coding)"
+        },
+        "free-stack-thinking": {
+          "name": "OmniRoute Free Stack (Thinking)"
+        },
+        "free-stack-coding": {
+          "name": "OmniRoute Free Stack (Coding)"
+        }
+      }
+    }
+  },
+  "agent": {
+    "explore": {
+      "disable": true
+    },
+    "general": {
+      "disable": true
+    }
+  },
+  "lsp": true
 }

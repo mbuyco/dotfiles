@@ -3,7 +3,7 @@ export const NotificationPlugin = async ({ project, client, $, directory, worktr
     event: async ({ event }) => {
       // Send notification on session completion
       if (event.type === "session.idle") {
-        await $`notify-send "Opencode" "Work Complete" && paplay ${directory}/work-complete.mp3`
+        await $`notify-send "Opencode - ${event.type}" "Work Complete!" && paplay ~/.config/opencode/plugins/notification-sound.mp3`
       }
     },
   }

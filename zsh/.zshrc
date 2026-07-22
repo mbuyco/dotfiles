@@ -172,4 +172,17 @@ autoload -Uz compinit && compinit
 # export ANTHROPIC_BASE_URL="http://127.0.0.1:3456"
 
 # Bun bin path
-# export PATH="/home/mike/.bun/bin:$PATH"
+export PATH="$HOME/.bun/bin:$PATH"
+
+# Initialized devbox
+eval "$(devbox global shellenv --init-hook)"
+
+# >>> grok installer >>>
+export PATH="$HOME/.grok/bin:$PATH"
+fpath=(~/.grok/completions/zsh $fpath)
+autoload -Uz compinit && compinit -C
+# <<< grok installer <<<
+
+# >>> oh-my-opencode-slim background subagents >>>
+export OPENCODE_EXPERIMENTAL_BACKGROUND_SUBAGENTS=true
+# <<< oh-my-opencode-slim background subagents <<<
