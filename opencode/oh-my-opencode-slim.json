@@ -1,113 +1,51 @@
 {
   "$schema": "https://unpkg.com/oh-my-opencode-slim@latest/oh-my-opencode-slim.schema.json",
-  "preset": "openai",
+  "preset": "opencode-zen-free",
   "presets": {
-    "openai": {
-      "council": {
-        "model": ["opencode/big-pickle", "omniroute/auto"]
-      },
-      "councillor": {
-        "model": ["opencode/big-pickle", "omniroute/auto"]
-      },
+    "opencode-zen-free": {
       "orchestrator": {
-        "model": ["opencode/mimo-v2.5-free", "omniroute/free-stack-thinking", "omniroute/auto/best-reasoning", "omniroute/auto"],
-        "variant": "medium",
-        "skills": [
-          "*"
-        ],
-        "mcps": [
-          "*",
-          "!context7"
-        ]
+        "model": "opencode/big-pickle",
+        "temperature": 0.4,
+        "skills": ["*"],
+        "mcps": ["*", "!context7"]
       },
       "oracle": {
-        "model": ["opencode/big-pickle", "omniroute/auto/best-reasoning", "omniroute/free-stack-thinking"],
-        "variant": "high",
-        "skills": [
-          "simplify"
-        ],
+        "model": "opencode/big-pickle",
+        "temperature": 0.4,
+        "variant": "max",
+        "skills": ["simplify"],
+        "mcps": []
+      },
+      "explorer": {
+        "model": "omniroute/auto/cheap",
+        "temperature": 0.2,
+        "skills": [],
         "mcps": []
       },
       "librarian": {
-        "model": ["opencode/nemotron-3-ultra-free", "omniroute/auto/best-reasoning", "omniroute/free-stack-thinking"],
-        "variant": "low",
+        "model": "opencode/deepseek-v4-flash-free",
+        "temperature": 0.2,
         "skills": [],
-        "mcps": [
-          "websearch",
-          "context7",
-          "gh_grep"
-        ]
-      },
-      "explorer": {
-        "model": ["opencode/north-mini-code-free", "omniroute/auto/best-free", "omniroute/free-stack-thinking"],
-        "variant": "low",
-        "skills": [],
-        "mcps": []
+        "mcps": ["websearch", "context7", "gh_grep"]
       },
       "designer": {
-        "model": ["opencode/nemotron-3-ultra-free", "omniroute/auto/best-reasoning", "omniroute/free-stack-thinking"],
+        "model": "opencode/mimo-v2.5-free",
+        "temperature": 0.3,
         "variant": "medium",
         "skills": [],
         "mcps": []
       },
       "fixer": {
-        "model": ["opencode/deepseek-v4-flash-free", "omniroute/auto/best-coding", "omniroute/free-stack-thinking"],
-        "variant": "medium",
-        "skills": [],
-        "mcps": []
-      }
-    },
-    "opencode-go": {
-      "orchestrator": {
-        "model": ["opencode-go/minimax-m3", "opencode/deepseek-v4-flash-free", "omniroute/auto/best-coding", "omniroute/free-stack-thinking"],
-        "variant": "max",
-        "skills": [
-          "*"
-        ],
-        "mcps": [
-          "*",
-          "!context7"
-        ]
-      },
-      "oracle": {
-        "model": ["opencode-go/qwen3.7-max", "opencode/mimo-v2.5-free", "omniroute/auto/best-reasoning", "omniroute/free-stack-thinking"],
-        "variant": "max",
-        "skills": [
-          "simplify"
-        ],
-        "mcps": []
-      },
-      "explorer": {
-        "model": ["opencode-go/deepseek-v4-flash", "opencode/deepseek-v4-flash-free", "omniroute/auto/best-reasoning", "omniroute/free-stack-thinking"],
-        "variant": "max",
-        "skills": [],
-        "mcps": []
-      },
-      "librarian": {
-        "model": ["opencode-go/deepseek-v4-flash", "opencode/deepseek-v4-flash-free", "omniroute/auto/best-reasoning", "omniroute/free-stack-thinking"],
-        "variant": "high",
-        "skills": [],
-        "mcps": [
-          "websearch",
-          "context7",
-          "gh_grep"
-        ]
-      },
-      "designer": {
-        "model": ["opencode-go/deepseek-v4-flash", "opencode/mimo-v2.5-free", "omniroute/auto/best-coding", "omniroute/free-stack-thinking"],
-        "variant": "medium",
-        "skills": [],
-        "mcps": []
-      },
-      "fixer": {
-        "model": ["opencode-go/deepseek-v4-flash", "opencode/deepseek-v4-flash-free", "omniroute/auto/best-coding", "omniroute/free-stack-thinking"],
+        "model": ["opencode/deepseek-v4-flash-free", "omniroute/auto/coding"],
+        "temperature": 0.2,
         "variant": "high",
         "skills": [],
         "mcps": []
       },
       "observer": {
-        "model": ["opencode-go/mimo-v2.5", "opencode/mimo-v2.5-free", "omniroute/auto/best-reasoning", "omniroute/free-stack-thinking"],
-        "variant": "max",
+        "model": "opencode/mimo-v2.5-free",
+        "temperature": 0.2,
+        "variant": "low",
         "skills": [],
         "mcps": []
       }

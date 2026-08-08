@@ -1,5 +1,332 @@
 {
   "$schema": "https://opencode.ai/config.json",
+  "provider": {
+    "omniroute": {
+      "name": "OmniRoute",
+      "npm": "@ai-sdk/openai-compatible",
+      "options": {
+        "baseURL": "http://localhost:20128/v1",
+        "apiKey": "{env:OMNIROUTE_API_KEY}"
+      },
+      "models": {
+        "auto/best-coding": {
+          "name": "auto/best-coding",
+          "limit": {
+            "context": 1048576,
+            "output": 384000,
+            "input": 1048576
+          }
+        },
+        "auto/best-reasoning": {
+          "name": "auto/best-reasoning",
+          "limit": {
+            "context": 1048576,
+            "output": 384000,
+            "input": 1048576
+          }
+        },
+        "auto/best-fast": {
+          "name": "auto/best-fast",
+          "limit": {
+            "context": 1048576,
+            "output": 384000,
+            "input": 1048576
+          }
+        },
+        "auto/best-vision": {
+          "name": "auto/best-vision",
+          "limit": {
+            "context": 1048576,
+            "output": 384000,
+            "input": 1048576
+          }
+        },
+        "auto/best-chat": {
+          "name": "auto/best-chat",
+          "limit": {
+            "context": 1048576,
+            "output": 384000,
+            "input": 1048576
+          }
+        },
+        "auto/best-coding-fast": {
+          "name": "auto/best-coding-fast",
+          "limit": {
+            "context": 1048576,
+            "output": 384000,
+            "input": 1048576
+          }
+        },
+        "auto/pro-coding": {
+          "name": "auto/pro-coding",
+          "limit": {
+            "context": 1048576,
+            "output": 384000,
+            "input": 1048576
+          }
+        },
+        "auto/pro-reasoning": {
+          "name": "auto/pro-reasoning",
+          "limit": {
+            "context": 1048576,
+            "output": 384000,
+            "input": 1048576
+          }
+        },
+        "auto/pro-vision": {
+          "name": "auto/pro-vision",
+          "limit": {
+            "context": 1048576,
+            "output": 384000,
+            "input": 1048576
+          }
+        },
+        "auto/pro-chat": {
+          "name": "auto/pro-chat",
+          "limit": {
+            "context": 1048576,
+            "output": 384000,
+            "input": 1048576
+          }
+        },
+        "auto/pro-fast": {
+          "name": "auto/pro-fast",
+          "limit": {
+            "context": 1048576,
+            "output": 384000,
+            "input": 1048576
+          }
+        },
+        "auto/coding": {
+          "name": "auto/coding",
+          "limit": {
+            "context": 1048576,
+            "output": 384000,
+            "input": 1048576
+          }
+        },
+        "auto/fast": {
+          "name": "auto/fast",
+          "limit": {
+            "context": 1048576,
+            "output": 384000,
+            "input": 1048576
+          }
+        },
+        "auto/chat": {
+          "name": "auto/chat",
+          "limit": {
+            "context": 1048576,
+            "output": 384000,
+            "input": 1048576
+          }
+        },
+        "auto/cheap": {
+          "name": "auto/cheap",
+          "limit": {
+            "context": 1048576,
+            "output": 384000,
+            "input": 1048576
+          }
+        },
+        "auto/offline": {
+          "name": "auto/offline",
+          "limit": {
+            "context": 1048576,
+            "output": 384000,
+            "input": 1048576
+          }
+        },
+        "auto/smart": {
+          "name": "auto/smart",
+          "limit": {
+            "context": 1048576,
+            "output": 384000,
+            "input": 1048576
+          }
+        },
+        "auto/claude-opus": {
+          "name": "auto/claude-opus",
+          "limit": {
+            "context": 1048576,
+            "output": 384000,
+            "input": 1048576
+          }
+        },
+        "auto/claude-sonnet": {
+          "name": "auto/claude-sonnet",
+          "limit": {
+            "context": 1048576,
+            "output": 384000,
+            "input": 1048576
+          }
+        },
+        "auto/best-free": {
+          "name": "auto/best-free",
+          "limit": {
+            "context": 1048576,
+            "output": 384000,
+            "input": 1048576
+          }
+        },
+        "auto/best-chaos": {
+          "name": "auto/best-chaos",
+          "limit": {
+            "context": 1048576,
+            "output": 384000,
+            "input": 1048576
+          }
+        },
+        "auto/chaos": {
+          "name": "auto/chaos",
+          "limit": {
+            "context": 1048576,
+            "output": 384000,
+            "input": 1048576
+          }
+        },
+        "auto/coding:fast": {
+          "name": "auto/coding:fast",
+          "limit": {
+            "context": 1048576,
+            "output": 384000,
+            "input": 1048576
+          }
+        },
+        "auto/coding:cheap": {
+          "name": "auto/coding:cheap",
+          "limit": {
+            "context": 1048576,
+            "output": 384000,
+            "input": 1048576
+          }
+        },
+        "auto/coding:free": {
+          "name": "auto/coding:free",
+          "limit": {
+            "context": 1048576,
+            "output": 384000,
+            "input": 1048576
+          }
+        },
+        "auto/coding:pro": {
+          "name": "auto/coding:pro",
+          "limit": {
+            "context": 409600,
+            "output": 131072,
+            "input": 409600
+          }
+        },
+        "auto/coding:reliable": {
+          "name": "auto/coding:reliable",
+          "limit": {
+            "context": 1048576,
+            "output": 384000,
+            "input": 1048576
+          }
+        },
+        "auto/reasoning": {
+          "name": "auto/reasoning",
+          "limit": {
+            "context": 1048576,
+            "output": 384000,
+            "input": 1048576
+          }
+        },
+        "auto/reasoning:pro": {
+          "name": "auto/reasoning:pro",
+          "limit": {
+            "context": 409600,
+            "output": 131072,
+            "input": 409600
+          }
+        },
+        "auto/vision": {
+          "name": "auto/vision",
+          "limit": {
+            "context": 1048576,
+            "output": 131072,
+            "input": 1048576
+          }
+        },
+        "auto/multimodal": {
+          "name": "auto/multimodal",
+          "limit": {
+            "context": 1048576,
+            "output": 131072,
+            "input": 1048576
+          }
+        },
+        "auto/glm": {
+          "name": "auto/glm",
+          "limit": {
+            "context": 131072,
+            "output": 8192,
+            "input": 131072
+          }
+        },
+        "auto/minimax": {
+          "name": "auto/minimax",
+          "limit": {
+            "context": 128000,
+            "output": 8192,
+            "input": 128000
+          }
+        },
+        "auto/mimo": {
+          "name": "auto/mimo",
+          "limit": {
+            "context": 1048576,
+            "output": 131072,
+            "input": 1048576
+          }
+        },
+        "auto/zai": {
+          "name": "auto/zai",
+          "limit": {
+            "context": 128000,
+            "output": 8192,
+            "input": 128000
+          }
+        },
+        "auto/gemma": {
+          "name": "auto/gemma",
+          "limit": {
+            "context": 262144,
+            "output": 8192,
+            "input": 262144
+          }
+        },
+        "auto/llama": {
+          "name": "auto/llama",
+          "limit": {
+            "context": 131072,
+            "output": 8192,
+            "input": 131072
+          }
+        },
+        "auto/gemini": {
+          "name": "auto/gemini",
+          "limit": {
+            "context": 128000,
+            "output": 8192,
+            "input": 128000
+          }
+        },
+        "free-stack": {
+          "name": "free-stack",
+          "limit": {
+            "context": 128000,
+            "output": 128000,
+            "input": 128000
+          }
+        },
+        "auto": {
+          "name": "OmniRoute Auto"
+        }
+      }
+    }
+  },
   "theme": "opencode",
   "autoupdate": true,
   "mcp": {
@@ -32,38 +359,6 @@
     "superpowers@git+https://github.com/obra/superpowers.git",
     "oh-my-opencode-slim"
   ],
-  "provider": {
-    "omniroute": {
-      "npm": "@ai-sdk/openai-compatible",
-      "name": "OmniRoute",
-      "options": {
-        "baseURL": "http://localhost:20128/v1"
-      },
-      "models": {
-        "auto": {
-          "name": "OmniRoute Auto"
-        },
-        "auto/best-reasoning": {
-          "name": "OmniRoute Auto (Best Reasoning)"
-        },
-        "auto/best-coding": {
-          "name": "OmniRoute Auto (Best Coding)"
-        },
-        "auto/best-free": {
-          "name": "OmniRoute Auto (Best Free)"
-        },
-        "auto/coding": {
-          "name": "OmniRoute Auto (Coding)"
-        },
-        "free-stack-thinking": {
-          "name": "OmniRoute Free Stack (Thinking)"
-        },
-        "free-stack-coding": {
-          "name": "OmniRoute Free Stack (Coding)"
-        }
-      }
-    }
-  },
   "agent": {
     "explore": {
       "disable": true
