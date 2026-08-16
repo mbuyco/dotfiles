@@ -100,3 +100,35 @@ alias oc="opencode"
 
 # Claude code
 alias cl="claude"
+
+lss() {
+    # Set model path (defaults to ~/models if not provided)
+    if [ -z "$LOCAL_MODEL_PATH" ]; then
+        LOCAL_MODEL_PATH="$HOME/models/$1"
+    fi
+
+    # Check if llama serve is installed
+    if ! command -v llama &> /dev/null; then
+        echo "Error: llama serve is not installed. Please install it first."
+        return 1
+    fi
+
+    # Set model name based on the provided argument
+    MODEL_NAME="$1"
+
+    if [ -z "$MODEL_NAME" ]; then
+        echo "Error: Model not specified"
+        echo "Usage: lss <model_file>"
+        return 1
+    fi
+
+    llama serve \
+        -m "${LOCAL_MODEL_PATH}/${MODEL_NAME}" \
+        -ngl 99 \
+        -c 4096 \
+        -t 6 \
+        -tb 8 \
+        -b 256 \
+        -ub 128 \
+        -np 1
+}
