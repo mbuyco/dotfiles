@@ -330,6 +330,20 @@
   "theme": "opencode",
   "autoupdate": true,
   "mcp": {
+    "adk-docs-mcp": {
+      "type": "local",
+      "command": [
+        "uvx",
+        "--from",
+        "mcpdoc",
+        "mcpdoc",
+        "--urls",
+        "AgentDevelopmentKit:https://adk.dev/llms.txt",
+        "--transport",
+        "stdio"
+      ],
+      "enabled": true
+    },
     "supabase-local": {
       "type": "remote",
       "url": "http://127.0.0.1:54321/mcp",
