@@ -1,0 +1,4 @@
+interface:
+  display_name: "Codebase Explorer"
+  short_description: "Map a codebase and explain its architecture"
+  default_prompt: "Use $codebase-explorer to map this repository concisely."

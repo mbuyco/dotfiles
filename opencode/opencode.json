@@ -334,6 +334,7 @@
       "type": "local",
       "command": [
         "uvx",
+        "--with=\"mcp<2.0\"",
         "--from",
         "mcpdoc",
         "mcpdoc",
