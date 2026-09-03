@@ -377,11 +377,8 @@
   },
   "plugin": [],
   "agent": {
-    "explore": {
-      "disable": true
-    },
-    "general": {
-      "disable": true
+    "codebase-explorer": {
+      "mode": "subagent"
     }
   },
   "lsp": true
