@@ -121,3 +121,6 @@ lss() {
         -np 1 \
         -hf "${1:-$DEFAULT_HF_MODEL}"
 }
+
+# Codex
+alias cdx="codex"

@@ -175,7 +175,9 @@ autoload -Uz compinit && compinit
 export PATH="$HOME/.bun/bin:$PATH"
 
 # Initialized devbox
-eval "$(devbox global shellenv --init-hook)"
+if command -v devbox &> /dev/null; then
+  eval "$(devbox global shellenv --init-hook)"
+fi
 
 
 # >>> oh-my-opencode-slim background subagents >>>
