@@ -17,6 +17,33 @@ Generate a PR summary changes made in the codebase.
     - 🔑 Key Changes
     - 🧪 QA Guidance (prefer with manual local testing guidance)
     - 📜 Environment/Configuration Changes (if any)
+- Example format:
+
+  ## 📰 Summary
+
+  [summary text]
+
+  ## ❓ What
+
+  [what...]
+
+  ## 🛠️ How
+
+  [how...]
+
+  ## 🔑 Key Changes
+
+  [key changes...]
+
+  ## 🧪 QA Guidance (prefer with manual local testing guidance)
+
+  [qa guidance...]
+
+  ## 📜 Environment/Configuration Changes (if any)
+
+  [environment guidance...]
+
+
 - In the "Key Changes", explain each changes and files modified in a concise way, and include the file path for each change.
 - Do not mention any environment variables and configuration values. Always redact when necessary.
 
