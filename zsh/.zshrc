@@ -179,6 +179,10 @@ if command -v devbox &> /dev/null; then
   eval "$(devbox global shellenv --init-hook)"
 fi
 
+# Initialize fzf for zsh
+if command -v zsh &> /dev/null; then
+  source <(fzf --zsh &> /dev/null)
+fi
 
 # >>> oh-my-opencode-slim background subagents >>>
 export OPENCODE_EXPERIMENTAL_BACKGROUND_SUBAGENTS=true

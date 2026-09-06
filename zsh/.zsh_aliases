@@ -1,6 +1,10 @@
 # godcuts
 alias tm="tmux"
 alias c="clear"
+if command -v fzf &> /dev/null; then
+  alias f="fzf"
+  alias h="history | fzf"
+fi
 
 # dotfiles
 alias godot="cd ~/dotfiles";

@@ -1,9 +1,9 @@
 ﻿cursor-style = block
-font-family = "Ubuntu Mono Nerd Font"
+font-family = "Monaco Nerd Font Mono"
 font-size = 12
 gtk-titlebar = false
 maximize = true
 scrollbar = never
 shell-integration-features = no-cursor
-theme = war2-light
+theme = war2-dark
 window-theme = dark
