@@ -34,7 +34,7 @@ alias tmk="tmux kill-server"
 alias ydlm="youtube-dl --extract-audio --audio-format mp3"
 
 # notes
-NOTES_FILENAME="notes-$(date +%Y%m%d).txt"
+NOTES_FILENAME="notes-$(date +%Y%m%d).md"
 alias notes="mkdir ~/notes &> /dev/null;  touch ~/notes/$NOTES_FILENAME; cd ~/notes; vim ~/notes/$NOTES_FILENAME"
 
 alias ide="$HOME/dotfiles/tmux/layout-1.sh"
