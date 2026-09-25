@@ -183,8 +183,6 @@ fi
 export OPENCODE_EXPERIMENTAL_BACKGROUND_SUBAGENTS=true
 # <<< oh-my-opencode-slim background subagents <<<
 
-export GITLAB_ACCESS_TOKEN="glpat-e3QuiUL8qPXh9XPadYsMKmM6MQpvOjEKdTpwZmVxeQ8.01.171uminxt"
-
 # direnv shell hook (must stay at the end so it wraps the final PATH)
 if command -v direnv >/dev/null 2>&1; then
   eval "$(direnv hook zsh)"

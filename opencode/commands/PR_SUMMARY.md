@@ -53,3 +53,7 @@ Generate a PR summary changes made in the codebase.
     - Example: `/PR_SUMMARY.md source=feature-branch`
 - `target` - The target branch for the PR. If not provided, the `main` or `master` branch will be used.
     - Example: `/PR_SUMMARY.md target=main`
+
+**Output**
+
+STRICTLY RETURN THE GENERATED PR SUMMARY ONLY
