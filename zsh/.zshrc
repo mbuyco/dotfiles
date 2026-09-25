@@ -195,3 +195,5 @@ else
     source <(fzf --zsh)
   fi
 fi
+
+if [ -f ~/.env ]; && source ~/.env
