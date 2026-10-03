@@ -12,7 +12,7 @@ if [[ $1 == --prompt ]]; then
   bindkey '^[' send-break
   title=''
   vared -p 'Pane title: ' title || exit 0
-  [[ -n $title ]] && tmux select-pane -t "$2" -T "$title"
+  [[ -n $title ]] && tmux set -p -t "$2" @label "$title"
   exit 0
 fi
 
