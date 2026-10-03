@@ -196,4 +196,8 @@ else
   fi
 fi
 
-if [ -f ~/.env ]; && source ~/.env
+if [ -f ~/.env ]; then
+    set -a
+    source ~/.env
+    set +a
+fi
