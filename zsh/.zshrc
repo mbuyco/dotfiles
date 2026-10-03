@@ -196,6 +196,12 @@ else
   fi
 fi
 
+if command -v go &> /dev/null; then
+    export GOPATH=$(go env GOPATH)
+    export PATH="$PATH:$(go env GOPATH)/bin"
+fi
+
+# last ride
 if [ -f ~/.env ]; then
     set -a
     source ~/.env
