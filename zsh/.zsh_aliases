@@ -37,8 +37,6 @@ alias ydlm="youtube-dl --extract-audio --audio-format mp3"
 NOTES_FILENAME="notes-$(date +%Y%m%d).md"
 alias notes="mkdir ~/notes &> /dev/null;  touch ~/notes/$NOTES_FILENAME; cd ~/notes; vim ~/notes/$NOTES_FILENAME"
 
-alias ide="$HOME/dotfiles/tmux/layout-1.sh"
-
 # docker
 DOCKER_COMPOSE_ROOT="$HOME/src/dev/docker/compose"
 alias dps="docker ps"
@@ -129,5 +127,5 @@ lss() {
 # Codex
 alias cdx="codex"
 
-# Claude Code
-alias cl="claude"
+# tmux default layout
+alias tl="$HOME/dotfiles/tmux/layout.sh"
