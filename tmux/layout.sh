@@ -24,12 +24,15 @@ while [[ $# -gt 0 ]]; do
 done
 
 init_layout() {
-    tmux set -p -t "$CURRENT_SESSION":"$NEW_WINDOW".0 @label "Planner Agent"
-    tmux send-keys -t "$CURRENT_SESSION":"$NEW_WINDOW".0 "claude" C-m
+    local new_window=${1:$NEW_WINDOW}
+
+    tmux set -p -t "$CURRENT_SESSION":"$new_window".0 @label "Planner Agent"
+    tmux send-keys -t "$CURRENT_SESSION":"$new_window".0 "claude" C-m
 
     tmux split-window -h
-    tmux set -p -t "$CURRENT_SESSION":"$NEW_WINDOW".1 @label "Executor Agent"
-    tmux send-keys -t "$CURRENT_SESSION":"$NEW_WINDOW".1 "claude" C-m
+    tmux set -p -t "$CURRENT_SESSION":"$new_window".1 @label "Executor Agent"
+    tmux send-keys -t "$CURRENT_SESSION":"$new_window".1 "claude" C-m
+    tmux select-pane -t "$CURRENT_SESSION":"$new_window".0
 }
 
 if $KILLALL; then
@@ -46,12 +49,14 @@ fi
 
 if [ -n "$TMUX" ]; then
   CURRENT_WINDOW_NAME=$(tmux display-message -p '#W')
+  TEMP_WINDOW="temp-$(date +%s)"
+  LATEST_WINDOW_INDEX=$(tmux list-windows -F '#{window_index}' | sort -n | tail -n 1)
+  NEW_WINDOW_INDEX=$(( ${LATEST_WINDOW_INDEX:-0} + 1 ))
 
-  if [[ "$CURRENT_WINDOW_NAME" != "$NEW_WINDOW" ]]; then
-    tmux rename-window -t "$CURRENT_WINDOW_NAME" "$NEW_WINDOW"
-  fi
-
-  init_layout
+  tmux new-window -t "$CURRENT_SESSION":"$NEW_WINDOW_INDEX" -n "$TEMP_WINDOW"
+  init_layout "$NEW_WINDOW_INDEX"
+  tmux rename-window -t "$CURRENT_SESSION":"$NEW_WINDOW_INDEX" "$NEW_WINDOW"
+  tmux kill-window -a \; move-window -t 0
 else
   tmux new-session -d -s "$NEW_SESSION" -n "$NEW_WINDOW"
   init_layout
