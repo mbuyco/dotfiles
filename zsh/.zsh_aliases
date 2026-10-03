@@ -128,3 +128,6 @@ lss() {
 
 # Codex
 alias cdx="codex"
+
+# Claude Code
+alias cl="claude"
