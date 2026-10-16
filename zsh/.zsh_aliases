@@ -129,3 +129,20 @@ alias cdx="codex"
 
 # tmux default layout
 alias tl="$HOME/dotfiles/tmux/layout.sh"
+
+alias dcdn="docker compose stop"
+
+# nvim dap logs
+alias ndl="cat $HOME/.local/state/nvim/dap.log | less"
+
+# git changes today
+alias gct="git log --since="midnight" --oneline | wc -l"
+
+# gitui
+alias gt="gitui"
+
+# lazygit
+alias lg="lazygit"
+
+# my docs
+alias nvs="cd ~/.mike/docs/ && nv"

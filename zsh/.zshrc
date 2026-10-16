@@ -183,11 +183,6 @@ fi
 export OPENCODE_EXPERIMENTAL_BACKGROUND_SUBAGENTS=true
 # <<< oh-my-opencode-slim background subagents <<<
 
-# direnv shell hook (must stay at the end so it wraps the final PATH)
-if command -v direnv >/dev/null 2>&1; then
-  eval "$(direnv hook zsh)"
-fi
-
 if [ -f ~/.fzf.zsh ]; then
   source ~/.fzf.zsh
 else
