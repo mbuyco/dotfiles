@@ -33,10 +33,6 @@ alias tmk="tmux kill-server"
 # youtube-dl
 alias ydlm="youtube-dl --extract-audio --audio-format mp3"
 
-# notes
-NOTES_FILENAME="notes-$(date +%Y%m%d).md"
-alias notes="mkdir ~/notes &> /dev/null;  touch ~/notes/$NOTES_FILENAME; cd ~/notes; vim ~/notes/$NOTES_FILENAME"
-
 # docker
 DOCKER_COMPOSE_ROOT="$HOME/src/dev/docker/compose"
 alias dps="docker ps"
@@ -46,6 +42,17 @@ if command -v nvim &> /dev/null; then
     alias vim="nvim"
     alias nv="nvim"
 fi
+
+# notes
+unalias notes 2>/dev/null
+notes() {
+  local dir=~/notes/$(date +%Y%m%d)
+  mkdir -p "$dir"
+  touch "$dir/main.md"
+  cd "$dir"
+  vim "$dir/main.md"
+}
+
 
 # git
 gdff() {
