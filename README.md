@@ -48,8 +48,8 @@ Symlinks are created with `sudo ln -s "$HOME/dotfiles/<component>..."`, so the r
 - **windows-terminal** (`windows-terminal/.profile`) — WSL/Windows profile.
 - **i3** (`i3/config`) — window-manager keybindings, workspace layout, status bar.
 - **tmux** (`tmux/`) —
-  - `.tmux.conf` — `C-a` prefix, `|`/`-` pane splits, mouse mode, vi keybindings, Wayland/X11-aware clipboard, catppuccin (mocha) status bar with weather/CPU/battery/date.
-  - Plugins: tpm, tmux-sensible, tmux-yank, tmux-battery, tmux-cpu, tmux-weather, tmux-which-key, vim-tmux-navigator, catppuccin.
+  - `.tmux.conf` — `C-a` prefix, `|`/`-` pane splits, mouse mode, vi keybindings, Wayland/X11-aware clipboard, transparent status bar with weather/CPU/battery/date; light/dark palettes in `themes/` switch automatically with the terminal theme.
+  - Plugins: tpm, tmux-sensible, tmux-yank, tmux-battery, tmux-cpu, tmux-weather, tmux-which-key, vim-tmux-navigator.
   - `layout-1.sh` — one-key tmux dev workspace: opens a `notes` window + a split `dev` window, kills other sessions first.
 - **ranger** (`ranger/rc.conf`) — file-manager config.
 

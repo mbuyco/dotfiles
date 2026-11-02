@@ -153,3 +153,6 @@ alias lg="lazygit"
 
 # my docs
 alias nvs="cd ~/.mike/docs/ && nv"
+
+# clbox: Claude Code docker sandbox
+[ -f "/Users/mike/dev/clbox/clbox.zsh" ] && source "/Users/mike/dev/clbox/clbox.zsh"
